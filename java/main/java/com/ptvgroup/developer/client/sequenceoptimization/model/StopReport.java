@@ -42,7 +42,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   StopReport.JSON_PROPERTY_BREAK_TIME,
   StopReport.JSON_PROPERTY_QUANTITIES
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-10T07:57:32.884322Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
 public class StopReport {
   public static final String JSON_PROPERTY_ARRIVAL_TIME = "arrivalTime";
   private OffsetDateTime arrivalTime;

@@ -39,7 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Violation.JSON_PROPERTY_TIME_EXCEEDANCE,
   Violation.JSON_PROPERTY_CAPACITY_EXCEEDANCE
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-10T07:57:32.884322Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
 public class Violation {
   public static final String JSON_PROPERTY_TYPE = "type";
   private ViolationType type;

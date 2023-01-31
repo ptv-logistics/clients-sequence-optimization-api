@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DepotLocationAttributes.JSON_PROPERTY_SERVICE_TIME_PER_PICKUP_STOP,
   DepotLocationAttributes.JSON_PROPERTY_SERVICE_TIME_PER_DELIVERY_STOP
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-10T07:57:32.884322Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
 public class DepotLocationAttributes {
   public static final String JSON_PROPERTY_SERVICE_TIME_PER_PICKUP_STOP = "serviceTimePerPickupStop";
   private Integer serviceTimePerPickupStop = 0;

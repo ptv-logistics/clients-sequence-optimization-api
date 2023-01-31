@@ -47,7 +47,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Driver.JSON_PROPERTY_MAXIMUM_DRIVING_TIME,
   Driver.JSON_PROPERTY_MAXIMUM_TRAVEL_TIME
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-10T07:57:32.884322Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
 public class Driver {
   public static final String JSON_PROPERTY_AVAILABILITY = "availability";
   private TimeInterval availability;
