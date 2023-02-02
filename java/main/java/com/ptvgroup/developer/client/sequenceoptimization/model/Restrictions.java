@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
   Restrictions.JSON_PROPERTY_SEQUENCE_OF_STOPS
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:22:26.165041Z[Etc/UTC]")
 public class Restrictions {
   public static final String JSON_PROPERTY_SEQUENCE_OF_STOPS = "sequenceOfStops";
   private StopsSequence sequenceOfStops = StopsSequence.ANY;

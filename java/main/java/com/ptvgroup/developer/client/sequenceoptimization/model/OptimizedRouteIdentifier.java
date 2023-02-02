@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
   OptimizedRouteIdentifier.JSON_PROPERTY_ID
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:22:26.165041Z[Etc/UTC]")
 public class OptimizedRouteIdentifier {
   public static final String JSON_PROPERTY_ID = "id";
   private UUID id;
