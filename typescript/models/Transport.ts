@@ -16,7 +16,7 @@ import { exists, mapValues } from '../runtime';
 /**
  * A transport is the order to transport goods, that is, to pick them up at one location and deliver them to another location.
  * 
- * See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.
+ * See [here](./concepts/locations-transports-and-stops) for more information.
  * @export
  * @interface Transport
  */
@@ -60,7 +60,7 @@ export interface Transport {
     /**
      * The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.
      * 
-     * See [here](./Concepts/Transport%20Priorities.htm) for more information.
+     * See [here](./concepts/transport-priorities) for more information.
      * @type {number}
      * @memberof Transport
      */

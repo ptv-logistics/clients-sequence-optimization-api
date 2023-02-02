@@ -16,7 +16,7 @@ import { exists, mapValues } from '../runtime';
 /**
  * Defines the accumulated driving and working times since the last break.
  * 
- * See [here](./Concepts/Drivers%20Working%20Hours.htm) for more information.
+ * See [here](./concepts/drivers-working-hours) for more information.
  * @export
  * @interface WorkLogbook
  */

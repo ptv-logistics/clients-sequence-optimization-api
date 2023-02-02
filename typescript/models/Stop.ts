@@ -41,7 +41,7 @@ import {
 /**
  * A stop groups subsequent pickups and/or deliveries at the same location. At a customer location, transports are scheduled in order of their type: pickups after deliveries. At a depot location a stop groups either pickups or deliveries.
  * 
- * See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.
+ * See [here](./concepts/route-sections-and-position-route) for more information.
  * @export
  * @interface Stop
  */

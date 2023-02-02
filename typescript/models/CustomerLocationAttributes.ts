@@ -43,7 +43,7 @@ export interface CustomerLocationAttributes {
      * 
      * If specified, positionInRoute must not be set for the same location.
      * 
-     * See [here](./Concepts/Route%20sections%20and%20Position%20in%20route.htm) for more information.
+     * See [here](./concepts/route-sections-and-position-route) for more information.
      * @type {number}
      * @memberof CustomerLocationAttributes
      */

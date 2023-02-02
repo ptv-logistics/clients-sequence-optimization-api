@@ -17,7 +17,7 @@
  * 
  * If one of the concerned fields is specified as well the most restrictive rule holds. For example if a preset and maximumDrivingTime or maximumTravelTime are specified, the minimum of the specified value and the value defined by the preset counts.
  * 
- * See [here](./Concepts/Drivers%20Working%20Hours.htm) for more information.
+ * See [here](./concepts/drivers-working-hours) for more information.
  * @export
  * @enum {string}
  */

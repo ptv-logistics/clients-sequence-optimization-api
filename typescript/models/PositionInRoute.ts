@@ -18,7 +18,7 @@
  *  * `FIRST_CUSTOMER_STOP` - A stop at a customer location with this position type has to be the very first customer stop in the route.
  *  * `LAST_CUSTOMER_STOP` - A stop at a customer location with this position type has to be the very last customer stop in the route.
  * 
- * See [here](./Concepts/Route%20sections%20and%20Position%20in%20route.htm) for more information.
+ * See [here](./concepts/route-sections-and-position-route) for more information.
  * @export
  * @enum {string}
  */

@@ -27,7 +27,7 @@ export interface Vehicle {
     capacities?: Array<number>;
     /**
      * The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.  
-     * Default profile is _EUR_VAN_. See [here](./Concepts/Profiles%20and%20Countries.htm) for a complete list of allowed values.
+     * Default profile is _EUR_VAN_. See [here](./concepts/profiles-and-countries) for a complete list of allowed values.
      * @type {string}
      * @memberof Vehicle
      */

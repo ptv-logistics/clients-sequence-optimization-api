@@ -14,7 +14,7 @@
 
 import { exists, mapValues } from '../runtime';
 /**
- * Defines when a break becomes necessary and how long it should be. See [here](./Concepts/Drivers%20Working%20Hours.htm) for more information.
+ * Defines when a break becomes necessary and how long it should be. See [here](./concepts/drivers-working-hours) for more information.
  * @export
  * @interface BreakRule
  */

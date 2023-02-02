@@ -115,7 +115,7 @@ export class RoutesApi extends runtime.BaseAPI {
     }
 
     /**
-     * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+     * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
      */
     async startAndCreateOptimizedRouteRaw(requestParameters: StartAndCreateOptimizedRouteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<OptimizedRouteIdentifier>> {
         if (requestParameters.optimizationRequest === null || requestParameters.optimizationRequest === undefined) {
@@ -148,7 +148,7 @@ export class RoutesApi extends runtime.BaseAPI {
     }
 
     /**
-     * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+     * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
      */
     async startAndCreateOptimizedRoute(requestParameters: StartAndCreateOptimizedRouteRequest, initOverrides?: RequestInit): Promise<OptimizedRouteIdentifier> {
         const response = await this.startAndCreateOptimizedRouteRaw(requestParameters, initOverrides);
