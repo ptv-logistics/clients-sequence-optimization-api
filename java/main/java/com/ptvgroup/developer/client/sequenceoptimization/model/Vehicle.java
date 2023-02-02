@@ -39,7 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Vehicle.JSON_PROPERTY_START_LOCATION_ID,
   Vehicle.JSON_PROPERTY_END_LOCATION_ID
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
 public class Vehicle {
   public static final String JSON_PROPERTY_CAPACITIES = "capacities";
   private List<Integer> capacities = null;
@@ -96,11 +96,11 @@ public class Vehicle {
   }
 
    /**
-   * The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./Concepts/Profiles%20and%20Countries.htm) for a complete list of allowed values.
+   * The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./concepts/profiles-and-countries) for a complete list of allowed values.
    * @return profile
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./Concepts/Profiles%20and%20Countries.htm) for a complete list of allowed values.")
+  @ApiModelProperty(value = "The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./concepts/profiles-and-countries) for a complete list of allowed values.")
   @JsonProperty(JSON_PROPERTY_PROFILE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

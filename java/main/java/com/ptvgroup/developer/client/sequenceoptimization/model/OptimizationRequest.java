@@ -47,7 +47,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   OptimizationRequest.JSON_PROPERTY_ROUTE,
   OptimizationRequest.JSON_PROPERTY_RESTRICTIONS
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
 public class OptimizationRequest {
   public static final String JSON_PROPERTY_LOCATIONS = "locations";
   private List<Location> locations = new ArrayList<>();

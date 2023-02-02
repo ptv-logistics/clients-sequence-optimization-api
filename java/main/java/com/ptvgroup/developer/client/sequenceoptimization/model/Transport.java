@@ -34,9 +34,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * A transport is the order to transport goods, that is, to pick them up at one location and deliver them to another location.  See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.
+ * A transport is the order to transport goods, that is, to pick them up at one location and deliver them to another location.  See [here](./concepts/locations-transports-and-stops) for more information.
  */
-@ApiModel(description = "A transport is the order to transport goods, that is, to pick them up at one location and deliver them to another location.  See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.")
+@ApiModel(description = "A transport is the order to transport goods, that is, to pick them up at one location and deliver them to another location.  See [here](./concepts/locations-transports-and-stops) for more information.")
 @JsonPropertyOrder({
   Transport.JSON_PROPERTY_ID,
   Transport.JSON_PROPERTY_QUANTITIES,
@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Transport.JSON_PROPERTY_DELIVERY_SERVICE_TIME,
   Transport.JSON_PROPERTY_PRIORITY
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
 public class Transport {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;
@@ -244,13 +244,13 @@ public class Transport {
   }
 
    /**
-   * The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./Concepts/Transport%20Priorities.htm) for more information.
+   * The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./concepts/transport-priorities) for more information.
    * minimum: 0
    * maximum: 9
    * @return priority
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./Concepts/Transport%20Priorities.htm) for more information.")
+  @ApiModelProperty(value = "The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./concepts/transport-priorities) for more information.")
   @JsonIgnore
 
   public Integer getPriority() {

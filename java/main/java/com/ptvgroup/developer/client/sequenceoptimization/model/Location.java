@@ -34,9 +34,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * A specific location where goods have to be picked up or delivered, or where the vehicle is located. A location is either a depot location or a customer location. Depot locations may be found at start or end of **route-stops**.  See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.
+ * A specific location where goods have to be picked up or delivered, or where the vehicle is located. A location is either a depot location or a customer location. Depot locations may be found at start or end of **route-stops**.  See [here](./concepts/locations-transports-and-stops) for more information.
  */
-@ApiModel(description = "A specific location where goods have to be picked up or delivered, or where the vehicle is located. A location is either a depot location or a customer location. Depot locations may be found at start or end of **route-stops**.  See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.")
+@ApiModel(description = "A specific location where goods have to be picked up or delivered, or where the vehicle is located. A location is either a depot location or a customer location. Depot locations may be found at start or end of **route-stops**.  See [here](./concepts/locations-transports-and-stops) for more information.")
 @JsonPropertyOrder({
   Location.JSON_PROPERTY_ID,
   Location.JSON_PROPERTY_TYPE,
@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Location.JSON_PROPERTY_CUSTOMER_LOCATION_ATTRIBUTES,
   Location.JSON_PROPERTY_DEPOT_LOCATION_ATTRIBUTES
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
 public class Location {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

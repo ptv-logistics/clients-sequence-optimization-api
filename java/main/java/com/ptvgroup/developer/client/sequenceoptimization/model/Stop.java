@@ -34,9 +34,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * A stop groups subsequent pickups and/or deliveries at the same location. At a customer location, transports are scheduled in order of their type: pickups after deliveries. At a depot location a stop groups either pickups or deliveries.  See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.
+ * A stop groups subsequent pickups and/or deliveries at the same location. At a customer location, transports are scheduled in order of their type: pickups after deliveries. At a depot location a stop groups either pickups or deliveries.  See [here](./concepts/route-sections-and-position-route) for more information.
  */
-@ApiModel(description = "A stop groups subsequent pickups and/or deliveries at the same location. At a customer location, transports are scheduled in order of their type: pickups after deliveries. At a depot location a stop groups either pickups or deliveries.  See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.")
+@ApiModel(description = "A stop groups subsequent pickups and/or deliveries at the same location. At a customer location, transports are scheduled in order of their type: pickups after deliveries. At a depot location a stop groups either pickups or deliveries.  See [here](./concepts/route-sections-and-position-route) for more information.")
 @JsonPropertyOrder({
   Stop.JSON_PROPERTY_LOCATION_ID,
   Stop.JSON_PROPERTY_DELIVERY_IDS,
@@ -48,7 +48,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Stop.JSON_PROPERTY_VIOLATIONS_ON_WAY_TO_STOP,
   Stop.JSON_PROPERTY_VIOLATIONS_AT_STOP
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
 public class Stop {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
   private String locationId;

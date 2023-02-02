@@ -41,7 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   CustomerLocationAttributes.JSON_PROPERTY_POSITION_IN_ROUTE,
   CustomerLocationAttributes.JSON_PROPERTY_ROUTE_SECTION_NUMBER
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
 public class CustomerLocationAttributes {
   public static final String JSON_PROPERTY_SERVICE_TIME_PER_TRANSPORT_STOP = "serviceTimePerTransportStop";
   private Integer serviceTimePerTransportStop = 0;
@@ -122,12 +122,12 @@ public class CustomerLocationAttributes {
   }
 
    /**
-   * If routeSectionNumber is specified, a stop at this customer location will be visited after stops at customer locations with specified lower routeSectionNumber and before stops at customer locations with specified higher routeSectionNumber. Consequently, the route section numbers of stops at customer locations must be non-decreasing.   If specified, positionInRoute must not be set for the same location.  See [here](./Concepts/Route%20sections%20and%20Position%20in%20route.htm) for more information.
+   * If routeSectionNumber is specified, a stop at this customer location will be visited after stops at customer locations with specified lower routeSectionNumber and before stops at customer locations with specified higher routeSectionNumber. Consequently, the route section numbers of stops at customer locations must be non-decreasing.   If specified, positionInRoute must not be set for the same location.  See [here](./concepts/route-sections-and-position-route) for more information.
    * minimum: 1
    * @return routeSectionNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If routeSectionNumber is specified, a stop at this customer location will be visited after stops at customer locations with specified lower routeSectionNumber and before stops at customer locations with specified higher routeSectionNumber. Consequently, the route section numbers of stops at customer locations must be non-decreasing.   If specified, positionInRoute must not be set for the same location.  See [here](./Concepts/Route%20sections%20and%20Position%20in%20route.htm) for more information.")
+  @ApiModelProperty(value = "If routeSectionNumber is specified, a stop at this customer location will be visited after stops at customer locations with specified lower routeSectionNumber and before stops at customer locations with specified higher routeSectionNumber. Consequently, the route section numbers of stops at customer locations must be non-decreasing.   If specified, positionInRoute must not be set for the same location.  See [here](./concepts/route-sections-and-position-route) for more information.")
   @JsonIgnore
 
   public Integer getRouteSectionNumber() {

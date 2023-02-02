@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * If specified, this stop has to be the very first/last customer stop in the route whenever there is a stop at this location. There can only be one stop at a customer location with a position in route of type FIRST_CUSTOMER_STOP/LAST_CUSTOMER_STOP.   If specified, routeSectionNumber must not be set for the same location.   * &#x60;FIRST_CUSTOMER_STOP&#x60; - A stop at a customer location with this position type has to be the very first customer stop in the route.  * &#x60;LAST_CUSTOMER_STOP&#x60; - A stop at a customer location with this position type has to be the very last customer stop in the route.  See [here](./Concepts/Route%20sections%20and%20Position%20in%20route.htm) for more information.
+ * If specified, this stop has to be the very first/last customer stop in the route whenever there is a stop at this location. There can only be one stop at a customer location with a position in route of type FIRST_CUSTOMER_STOP/LAST_CUSTOMER_STOP.   If specified, routeSectionNumber must not be set for the same location.   * &#x60;FIRST_CUSTOMER_STOP&#x60; - A stop at a customer location with this position type has to be the very first customer stop in the route.  * &#x60;LAST_CUSTOMER_STOP&#x60; - A stop at a customer location with this position type has to be the very last customer stop in the route.  See [here](./concepts/route-sections-and-position-route) for more information.
  */
 public enum PositionInRoute {
   

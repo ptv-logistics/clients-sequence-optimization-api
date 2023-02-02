@@ -32,16 +32,16 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 /**
- * Defines when a break becomes necessary and how long it should be. See [here](./Concepts/Drivers%20Working%20Hours.htm) for more information.
+ * Defines when a break becomes necessary and how long it should be. See [here](./concepts/drivers-working-hours) for more information.
  */
-@ApiModel(description = "Defines when a break becomes necessary and how long it should be. See [here](./Concepts/Drivers%20Working%20Hours.htm) for more information.")
+@ApiModel(description = "Defines when a break becomes necessary and how long it should be. See [here](./concepts/drivers-working-hours) for more information.")
 @JsonPropertyOrder({
   BreakRule.JSON_PROPERTY_BREAK_TIME,
   BreakRule.JSON_PROPERTY_MAXIMUM_DRIVING_TIME_BETWEEN_BREAKS,
   BreakRule.JSON_PROPERTY_MAXIMUM_WORKING_TIME_BETWEEN_BREAKS,
   BreakRule.JSON_PROPERTY_WORKING_TIME_THRESHOLD
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
 public class BreakRule {
   public static final String JSON_PROPERTY_BREAK_TIME = "breakTime";
   private Integer breakTime;

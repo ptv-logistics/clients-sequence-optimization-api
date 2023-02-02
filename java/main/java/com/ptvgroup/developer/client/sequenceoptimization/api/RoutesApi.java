@@ -41,7 +41,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
 public class RoutesApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
@@ -229,9 +229,9 @@ public class RoutesApi {
   }
   /**
    * 
-   * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+   * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
    * @param optimizationRequest Specific instance for sequence optimization. (required)
-   * @param considerTransportPriorities Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)
+   * @param considerTransportPriorities Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)
    * @return OptimizedRouteIdentifier
    * @throws ApiException if fails to make API call
    */
@@ -242,9 +242,9 @@ public class RoutesApi {
 
   /**
    * 
-   * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+   * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
    * @param optimizationRequest Specific instance for sequence optimization. (required)
-   * @param considerTransportPriorities Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)
+   * @param considerTransportPriorities Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)
    * @return ApiResponse&lt;OptimizedRouteIdentifier&gt;
    * @throws ApiException if fails to make API call
    */

@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   WayReport.JSON_PROPERTY_DRIVING_TIME,
   WayReport.JSON_PROPERTY_BREAK_TIME
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T14:00:36.487937Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:09:27.762325Z[Etc/UTC]")
 public class WayReport {
   public static final String JSON_PROPERTY_DISTANCE = "distance";
   private Integer distance;
