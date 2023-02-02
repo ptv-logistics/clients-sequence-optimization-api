@@ -26,7 +26,7 @@ using OpenAPIDateConverter = PTV.Developer.Clients.sequenceoptimization.Client.O
 namespace PTV.Developer.Clients.sequenceoptimization.Model
 {
     /// <summary>
-    /// Defines the accumulated driving and working times since the last break.  See [here](./Concepts/Drivers%20Working%20Hours.htm) for more information.
+    /// Defines the accumulated driving and working times since the last break.  See [here](./concepts/drivers-working-hours) for more information.
     /// </summary>
     [DataContract(Name = "WorkLogbook")]
     public partial class WorkLogbook : IEquatable<WorkLogbook>, IValidatableObject

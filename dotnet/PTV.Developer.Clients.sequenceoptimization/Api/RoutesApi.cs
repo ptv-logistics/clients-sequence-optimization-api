@@ -72,11 +72,11 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+        /// Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
         /// </remarks>
         /// <exception cref="PTV.Developer.Clients.sequenceoptimization.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="optimizationRequest">Specific instance for sequence optimization.</param>
-        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)</param>
+        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <returns>OptimizedRouteIdentifier</returns>
         OptimizedRouteIdentifier StartAndCreateOptimizedRoute(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?));
 
@@ -84,11 +84,11 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+        /// Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
         /// </remarks>
         /// <exception cref="PTV.Developer.Clients.sequenceoptimization.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="optimizationRequest">Specific instance for sequence optimization.</param>
-        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)</param>
+        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <returns>ApiResponse of OptimizedRouteIdentifier</returns>
         ApiResponse<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteWithHttpInfo(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?));
         #endregion Synchronous Operations
@@ -150,11 +150,11 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+        /// Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
         /// </remarks>
         /// <exception cref="PTV.Developer.Clients.sequenceoptimization.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="optimizationRequest">Specific instance for sequence optimization.</param>
-        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)</param>
+        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OptimizedRouteIdentifier</returns>
         System.Threading.Tasks.Task<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -163,11 +163,11 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+        /// Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
         /// </remarks>
         /// <exception cref="PTV.Developer.Clients.sequenceoptimization.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="optimizationRequest">Specific instance for sequence optimization.</param>
-        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)</param>
+        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OptimizedRouteIdentifier)</returns>
         System.Threading.Tasks.Task<ApiResponse<OptimizedRouteIdentifier>> StartAndCreateOptimizedRouteWithHttpInfoAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -554,11 +554,11 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         }
 
         /// <summary>
-        ///  Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+        ///  Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
         /// </summary>
         /// <exception cref="PTV.Developer.Clients.sequenceoptimization.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="optimizationRequest">Specific instance for sequence optimization.</param>
-        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)</param>
+        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <returns>OptimizedRouteIdentifier</returns>
         public OptimizedRouteIdentifier StartAndCreateOptimizedRoute(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?))
         {
@@ -567,11 +567,11 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         }
 
         /// <summary>
-        ///  Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+        ///  Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
         /// </summary>
         /// <exception cref="PTV.Developer.Clients.sequenceoptimization.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="optimizationRequest">Specific instance for sequence optimization.</param>
-        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)</param>
+        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <returns>ApiResponse of OptimizedRouteIdentifier</returns>
         public PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteWithHttpInfo(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?))
         {
@@ -631,11 +631,11 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         }
 
         /// <summary>
-        ///  Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+        ///  Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
         /// </summary>
         /// <exception cref="PTV.Developer.Clients.sequenceoptimization.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="optimizationRequest">Specific instance for sequence optimization.</param>
-        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)</param>
+        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OptimizedRouteIdentifier</returns>
         public async System.Threading.Tasks.Task<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -645,11 +645,11 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         }
 
         /// <summary>
-        ///  Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../Help/Faq.htm) for more information.
+        ///  Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
         /// </summary>
         /// <exception cref="PTV.Developer.Clients.sequenceoptimization.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="optimizationRequest">Specific instance for sequence optimization.</param>
-        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./Concepts/Transport%20Priorities.htm) for more information. (optional, default to false)</param>
+        /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OptimizedRouteIdentifier)</returns>
         public async System.Threading.Tasks.Task<PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteIdentifier>> StartAndCreateOptimizedRouteWithHttpInfoAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))

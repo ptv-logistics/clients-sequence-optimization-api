@@ -26,9 +26,9 @@ using OpenAPIDateConverter = PTV.Developer.Clients.sequenceoptimization.Client.O
 namespace PTV.Developer.Clients.sequenceoptimization.Model
 {
     /// <summary>
-    /// Specifies break rule as well as maximum driving and travel time according to the chosen law.  If one of the concerned fields is specified as well the most restrictive rule holds. For example if a preset and maximumDrivingTime or maximumTravelTime are specified, the minimum of the specified value and the value defined by the preset counts.  See [here](./Concepts/Drivers%20Working%20Hours.htm) for more information.
+    /// Specifies break rule as well as maximum driving and travel time according to the chosen law.  If one of the concerned fields is specified as well the most restrictive rule holds. For example if a preset and maximumDrivingTime or maximumTravelTime are specified, the minimum of the specified value and the value defined by the preset counts.  See [here](./concepts/drivers-working-hours) for more information.
     /// </summary>
-    /// <value>Specifies break rule as well as maximum driving and travel time according to the chosen law.  If one of the concerned fields is specified as well the most restrictive rule holds. For example if a preset and maximumDrivingTime or maximumTravelTime are specified, the minimum of the specified value and the value defined by the preset counts.  See [here](./Concepts/Drivers%20Working%20Hours.htm) for more information.</value>
+    /// <value>Specifies break rule as well as maximum driving and travel time according to the chosen law.  If one of the concerned fields is specified as well the most restrictive rule holds. For example if a preset and maximumDrivingTime or maximumTravelTime are specified, the minimum of the specified value and the value defined by the preset counts.  See [here](./concepts/drivers-working-hours) for more information.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum WorkingHoursPreset
     {

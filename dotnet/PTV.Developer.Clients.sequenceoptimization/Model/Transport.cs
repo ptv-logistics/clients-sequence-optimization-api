@@ -26,7 +26,7 @@ using OpenAPIDateConverter = PTV.Developer.Clients.sequenceoptimization.Client.O
 namespace PTV.Developer.Clients.sequenceoptimization.Model
 {
     /// <summary>
-    /// A transport is the order to transport goods, that is, to pick them up at one location and deliver them to another location.  See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.
+    /// A transport is the order to transport goods, that is, to pick them up at one location and deliver them to another location.  See [here](./concepts/locations-transports-and-stops) for more information.
     /// </summary>
     [DataContract(Name = "Transport")]
     public partial class Transport : IEquatable<Transport>, IValidatableObject
@@ -45,7 +45,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="pickupServiceTime">The service time [s] that is required to pick up the transport goods at the pickup location. (default to 0).</param>
         /// <param name="deliveryLocationId">The ID of the location where goods have to be delivered to. (required).</param>
         /// <param name="deliveryServiceTime">The service time [s] that is required to deliver the transport goods at the delivery location. (default to 0).</param>
-        /// <param name="priority">The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./Concepts/Transport%20Priorities.htm) for more information..</param>
+        /// <param name="priority">The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./concepts/transport-priorities) for more information..</param>
         public Transport(string id = default(string), List<int> quantities = default(List<int>), string pickupLocationId = default(string), int pickupServiceTime = 0, string deliveryLocationId = default(string), int deliveryServiceTime = 0, int? priority = default(int?))
         {
             // to ensure "id" is required (not null)
@@ -112,9 +112,9 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         public int DeliveryServiceTime { get; set; }
 
         /// <summary>
-        /// The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./Concepts/Transport%20Priorities.htm) for more information.
+        /// The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./concepts/transport-priorities) for more information.
         /// </summary>
-        /// <value>The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./Concepts/Transport%20Priorities.htm) for more information.</value>
+        /// <value>The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./concepts/transport-priorities) for more information.</value>
         [DataMember(Name = "priority", EmitDefaultValue = true)]
         public int? Priority { get; set; }
 

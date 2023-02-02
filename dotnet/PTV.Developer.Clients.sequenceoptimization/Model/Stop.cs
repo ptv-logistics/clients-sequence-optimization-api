@@ -26,7 +26,7 @@ using OpenAPIDateConverter = PTV.Developer.Clients.sequenceoptimization.Client.O
 namespace PTV.Developer.Clients.sequenceoptimization.Model
 {
     /// <summary>
-    /// A stop groups subsequent pickups and/or deliveries at the same location. At a customer location, transports are scheduled in order of their type: pickups after deliveries. At a depot location a stop groups either pickups or deliveries.  See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.
+    /// A stop groups subsequent pickups and/or deliveries at the same location. At a customer location, transports are scheduled in order of their type: pickups after deliveries. At a depot location a stop groups either pickups or deliveries.  See [here](./concepts/route-sections-and-position-route) for more information.
     /// </summary>
     [DataContract(Name = "Stop")]
     public partial class Stop : IEquatable<Stop>, IValidatableObject

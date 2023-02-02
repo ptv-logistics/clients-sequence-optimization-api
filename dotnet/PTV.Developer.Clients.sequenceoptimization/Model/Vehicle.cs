@@ -35,7 +35,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// Initializes a new instance of the <see cref="Vehicle" /> class.
         /// </summary>
         /// <param name="capacities">The list of capacities for the different quantity dimensions of goods that can be transported. The maximum length of this list is 100. That is, up to 100 different quantity dimensions (e.g. number of pallets, weight, volume, etc.) can be distinguished. Transports can only be executed by a vehicle with a higher (or an equal) maximum capacity in every quantity dimension. The length of this list has to be the same for all transports and the vehicle. If and only if this list of capacities is empty for the given vehicle, the quantities of each transport must be empty..</param>
-        /// <param name="profile">The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./Concepts/Profiles%20and%20Countries.htm) for a complete list of allowed values. (default to &quot;EUR_VAN&quot;).</param>
+        /// <param name="profile">The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./concepts/profiles-and-countries) for a complete list of allowed values. (default to &quot;EUR_VAN&quot;).</param>
         /// <param name="startLocationId">ID of the vehicle&#39;s start location. If vehicle&#39;s start location does not coincide with the location of the first pickup, only the coordinates of vehicle&#39;s start location are considered and all other attributes such as opening intervals, service time or type are ignored. If no start location is specified, it is assumed that the vehicle is available at the first stop..</param>
         /// <param name="endLocationId">ID of the vehicle&#39;s end location. If vehicle&#39;s end location does not coincide with the location of the last delivery, only the coordinates of vehicle&#39;s end location are considered and all other attributes such as opening intervals, service time or type are ignored. If no end location is specified, it is assumed that the vehicle remains at the last stop..</param>
         public Vehicle(List<int> capacities = default(List<int>), string profile = "EUR_VAN", string startLocationId = default(string), string endLocationId = default(string))
@@ -55,9 +55,9 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         public List<int> Capacities { get; set; }
 
         /// <summary>
-        /// The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./Concepts/Profiles%20and%20Countries.htm) for a complete list of allowed values.
+        /// The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./concepts/profiles-and-countries) for a complete list of allowed values.
         /// </summary>
-        /// <value>The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./Concepts/Profiles%20and%20Countries.htm) for a complete list of allowed values.</value>
+        /// <value>The profile defines attributes of the vehicle relevant to determine travel times and distances between any two locations.   Default profile is _EUR_VAN_. See [here](./concepts/profiles-and-countries) for a complete list of allowed values.</value>
         [DataMember(Name = "profile", EmitDefaultValue = false)]
         public string Profile { get; set; }
 

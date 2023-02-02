@@ -26,7 +26,7 @@ using OpenAPIDateConverter = PTV.Developer.Clients.sequenceoptimization.Client.O
 namespace PTV.Developer.Clients.sequenceoptimization.Model
 {
     /// <summary>
-    /// Defines when a break becomes necessary and how long it should be. See [here](./Concepts/Drivers%20Working%20Hours.htm) for more information.
+    /// Defines when a break becomes necessary and how long it should be. See [here](./concepts/drivers-working-hours) for more information.
     /// </summary>
     [DataContract(Name = "BreakRule")]
     public partial class BreakRule : IEquatable<BreakRule>, IValidatableObject

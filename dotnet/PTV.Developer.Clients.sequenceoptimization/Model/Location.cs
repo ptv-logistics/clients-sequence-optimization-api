@@ -26,7 +26,7 @@ using OpenAPIDateConverter = PTV.Developer.Clients.sequenceoptimization.Client.O
 namespace PTV.Developer.Clients.sequenceoptimization.Model
 {
     /// <summary>
-    /// A specific location where goods have to be picked up or delivered, or where the vehicle is located. A location is either a depot location or a customer location. Depot locations may be found at start or end of **route-stops**.  See [here](./Concepts/Locations,%20Transports%20and%20Stops.htm) for more information.
+    /// A specific location where goods have to be picked up or delivered, or where the vehicle is located. A location is either a depot location or a customer location. Depot locations may be found at start or end of **route-stops**.  See [here](./concepts/locations-transports-and-stops) for more information.
     /// </summary>
     [DataContract(Name = "Location")]
     public partial class Location : IEquatable<Location>, IValidatableObject
