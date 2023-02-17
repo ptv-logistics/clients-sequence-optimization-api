@@ -45,7 +45,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Location" /> class.
         /// </summary>
-        /// <param name="id">The unique ID for this location. This ID can be used to reference the location from other elements, for example from transports or the vehicle. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results. (required).</param>
+        /// <param name="id">The unique ID for this location. This ID can be used to reference the location from other elements, for example from transports or the vehicle. The ID does not influence the result. (required).</param>
         /// <param name="type">type.</param>
         /// <param name="latitude">The latitude value of the location in degrees (WGS84/EPSG:4326) from south to north. (required).</param>
         /// <param name="longitude">The longitude value of the location in degrees (WGS84/EPSG:4326) from west to east. (required).</param>
@@ -68,9 +68,9 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         }
 
         /// <summary>
-        /// The unique ID for this location. This ID can be used to reference the location from other elements, for example from transports or the vehicle. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results.
+        /// The unique ID for this location. This ID can be used to reference the location from other elements, for example from transports or the vehicle. The ID does not influence the result.
         /// </summary>
-        /// <value>The unique ID for this location. This ID can be used to reference the location from other elements, for example from transports or the vehicle. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results.</value>
+        /// <value>The unique ID for this location. This ID can be used to reference the location from other elements, for example from transports or the vehicle. The ID does not influence the result.</value>
         [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = false)]
         public string Id { get; set; }
 

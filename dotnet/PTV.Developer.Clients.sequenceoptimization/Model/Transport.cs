@@ -39,7 +39,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Transport" /> class.
         /// </summary>
-        /// <param name="id">A unique ID across all transports. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results. (required).</param>
+        /// <param name="id">A unique ID across all transports. The ID does not influence the result. (required).</param>
         /// <param name="quantities">A list of quantity dimensions of goods that have to be transported from pickup location to delivery location. The maximum length of this list is 100. That is, up to 100 different quantity dimensions (e.g. number of pallets, weight, volume, etc.) can be distinguished. Transports can only be executed by a vehicle with a higher (or an equal) maximum capacity in every quantity dimension. The length of this list has to be the same for all transports and all capacities of the vehicle. If and only if this list of quantities is empty for all transports, the capacities of the given vehicle must be empty..</param>
         /// <param name="pickupLocationId">The ID of the location where goods have to be picked up. (required).</param>
         /// <param name="pickupServiceTime">The service time [s] that is required to pick up the transport goods at the pickup location. (default to 0).</param>
@@ -70,9 +70,9 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         }
 
         /// <summary>
-        /// A unique ID across all transports. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results.
+        /// A unique ID across all transports. The ID does not influence the result.
         /// </summary>
-        /// <value>A unique ID across all transports. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results.</value>
+        /// <value>A unique ID across all transports. The ID does not influence the result.</value>
         [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = false)]
         public string Id { get; set; }
 
