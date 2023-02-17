@@ -22,7 +22,7 @@ import { exists, mapValues } from '../runtime';
  */
 export interface Transport {
     /**
-     * A unique ID across all transports. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results.
+     * A unique ID across all transports. The ID does not influence the result.
      * @type {string}
      * @memberof Transport
      */

@@ -47,7 +47,7 @@ import {
  */
 export interface Location {
     /**
-     * The unique ID for this location. This ID can be used to reference the location from other elements, for example from transports or the vehicle. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results.
+     * The unique ID for this location. This ID can be used to reference the location from other elements, for example from transports or the vehicle. The ID does not influence the result.
      * @type {string}
      * @memberof Location
      */
