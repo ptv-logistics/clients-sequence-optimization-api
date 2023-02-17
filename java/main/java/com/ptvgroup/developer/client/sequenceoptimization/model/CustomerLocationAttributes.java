@@ -41,7 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   CustomerLocationAttributes.JSON_PROPERTY_POSITION_IN_ROUTE,
   CustomerLocationAttributes.JSON_PROPERTY_ROUTE_SECTION_NUMBER
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:22:26.165041Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-16T14:45:30.818436Z[Etc/UTC]")
 public class CustomerLocationAttributes {
   public static final String JSON_PROPERTY_SERVICE_TIME_PER_TRANSPORT_STOP = "serviceTimePerTransportStop";
   private Integer serviceTimePerTransportStop = 0;

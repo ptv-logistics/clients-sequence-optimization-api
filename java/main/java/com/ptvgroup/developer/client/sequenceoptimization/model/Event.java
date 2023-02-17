@@ -39,7 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Event.JSON_PROPERTY_DURATION,
   Event.JSON_PROPERTY_TRANSPORT_ID
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:22:26.165041Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-16T14:45:30.818436Z[Etc/UTC]")
 public class Event {
   public static final String JSON_PROPERTY_TYPE = "type";
   private EventType type;

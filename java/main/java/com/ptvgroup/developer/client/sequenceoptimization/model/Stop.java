@@ -48,7 +48,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Stop.JSON_PROPERTY_VIOLATIONS_ON_WAY_TO_STOP,
   Stop.JSON_PROPERTY_VIOLATIONS_AT_STOP
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:22:26.165041Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-16T14:45:30.818436Z[Etc/UTC]")
 public class Stop {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
   private String locationId;

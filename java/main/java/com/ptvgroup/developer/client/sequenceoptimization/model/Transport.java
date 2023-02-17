@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Transport.JSON_PROPERTY_DELIVERY_SERVICE_TIME,
   Transport.JSON_PROPERTY_PRIORITY
 })
-@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T08:22:26.165041Z[Etc/UTC]")
+@javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-16T14:45:30.818436Z[Etc/UTC]")
 public class Transport {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;
@@ -78,11 +78,11 @@ public class Transport {
   }
 
    /**
-   * A unique ID across all transports. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results.
+   * A unique ID across all transports. The ID does not influence the result.
    * @return id
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "A unique ID across all transports. For multiple identical requests the optimized route will always be the same. But please be aware that different IDs can lead to different results.")
+  @ApiModelProperty(required = true, value = "A unique ID across all transports. The ID does not influence the result.")
   @JsonProperty(JSON_PROPERTY_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
