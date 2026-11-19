@@ -42,12 +42,14 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   WorkLogbook.JSON_PROPERTY_ACCUMULATED_DRIVING_TIME_SINCE_LAST_BREAK,
   WorkLogbook.JSON_PROPERTY_ACCUMULATED_WORKING_TIME_SINCE_LAST_BREAK
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class WorkLogbook {
   public static final String JSON_PROPERTY_LAST_TIME_THE_DRIVER_WORKED = "lastTimeTheDriverWorked";
+  @javax.annotation.Nonnull
   private OffsetDateTime lastTimeTheDriverWorked;
 
   public static final String JSON_PROPERTY_ACCUMULATED_DRIVING_TIME_SINCE_LAST_BREAK = "accumulatedDrivingTimeSinceLastBreak";
+  @javax.annotation.Nullable
   private Integer accumulatedDrivingTimeSinceLastBreak = 0;
 
   public static final String JSON_PROPERTY_ACCUMULATED_WORKING_TIME_SINCE_LAST_BREAK = "accumulatedWorkingTimeSinceLastBreak";
@@ -56,7 +58,7 @@ public class WorkLogbook {
   public WorkLogbook() { 
   }
 
-  public WorkLogbook lastTimeTheDriverWorked(OffsetDateTime lastTimeTheDriverWorked) {
+  public WorkLogbook lastTimeTheDriverWorked(@javax.annotation.Nonnull OffsetDateTime lastTimeTheDriverWorked) {
     this.lastTimeTheDriverWorked = lastTimeTheDriverWorked;
     return this;
   }
@@ -66,21 +68,21 @@ public class WorkLogbook {
    * @return lastTimeTheDriverWorked
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_LAST_TIME_THE_DRIVER_WORKED)
+  @JsonProperty(value = JSON_PROPERTY_LAST_TIME_THE_DRIVER_WORKED, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getLastTimeTheDriverWorked() {
     return lastTimeTheDriverWorked;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LAST_TIME_THE_DRIVER_WORKED)
+  @JsonProperty(value = JSON_PROPERTY_LAST_TIME_THE_DRIVER_WORKED, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLastTimeTheDriverWorked(OffsetDateTime lastTimeTheDriverWorked) {
+  public void setLastTimeTheDriverWorked(@javax.annotation.Nonnull OffsetDateTime lastTimeTheDriverWorked) {
     this.lastTimeTheDriverWorked = lastTimeTheDriverWorked;
   }
 
 
-  public WorkLogbook accumulatedDrivingTimeSinceLastBreak(Integer accumulatedDrivingTimeSinceLastBreak) {
+  public WorkLogbook accumulatedDrivingTimeSinceLastBreak(@javax.annotation.Nullable Integer accumulatedDrivingTimeSinceLastBreak) {
     this.accumulatedDrivingTimeSinceLastBreak = accumulatedDrivingTimeSinceLastBreak;
     return this;
   }
@@ -91,21 +93,21 @@ public class WorkLogbook {
    * @return accumulatedDrivingTimeSinceLastBreak
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCUMULATED_DRIVING_TIME_SINCE_LAST_BREAK)
+  @JsonProperty(value = JSON_PROPERTY_ACCUMULATED_DRIVING_TIME_SINCE_LAST_BREAK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getAccumulatedDrivingTimeSinceLastBreak() {
     return accumulatedDrivingTimeSinceLastBreak;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCUMULATED_DRIVING_TIME_SINCE_LAST_BREAK)
+  @JsonProperty(value = JSON_PROPERTY_ACCUMULATED_DRIVING_TIME_SINCE_LAST_BREAK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccumulatedDrivingTimeSinceLastBreak(Integer accumulatedDrivingTimeSinceLastBreak) {
+  public void setAccumulatedDrivingTimeSinceLastBreak(@javax.annotation.Nullable Integer accumulatedDrivingTimeSinceLastBreak) {
     this.accumulatedDrivingTimeSinceLastBreak = accumulatedDrivingTimeSinceLastBreak;
   }
 
 
-  public WorkLogbook accumulatedWorkingTimeSinceLastBreak(Integer accumulatedWorkingTimeSinceLastBreak) {
+  public WorkLogbook accumulatedWorkingTimeSinceLastBreak(@javax.annotation.Nullable Integer accumulatedWorkingTimeSinceLastBreak) {
     this.accumulatedWorkingTimeSinceLastBreak = JsonNullable.<Integer>of(accumulatedWorkingTimeSinceLastBreak);
     return this;
   }
@@ -121,7 +123,7 @@ public class WorkLogbook {
         return accumulatedWorkingTimeSinceLastBreak.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_ACCUMULATED_WORKING_TIME_SINCE_LAST_BREAK)
+  @JsonProperty(value = JSON_PROPERTY_ACCUMULATED_WORKING_TIME_SINCE_LAST_BREAK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public JsonNullable<Integer> getAccumulatedWorkingTimeSinceLastBreak_JsonNullable() {
@@ -133,7 +135,7 @@ public class WorkLogbook {
     this.accumulatedWorkingTimeSinceLastBreak = accumulatedWorkingTimeSinceLastBreak;
   }
 
-  public void setAccumulatedWorkingTimeSinceLastBreak(Integer accumulatedWorkingTimeSinceLastBreak) {
+  public void setAccumulatedWorkingTimeSinceLastBreak(@javax.annotation.Nullable Integer accumulatedWorkingTimeSinceLastBreak) {
     this.accumulatedWorkingTimeSinceLastBreak = JsonNullable.<Integer>of(accumulatedWorkingTimeSinceLastBreak);
   }
 
@@ -187,10 +189,7 @@ public class WorkLogbook {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -227,17 +226,17 @@ public class WorkLogbook {
 
     // add `lastTimeTheDriverWorked` to the URL query string
     if (getLastTimeTheDriverWorked() != null) {
-      joiner.add(String.format("%slastTimeTheDriverWorked%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getLastTimeTheDriverWorked()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%slastTimeTheDriverWorked%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getLastTimeTheDriverWorked()))));
     }
 
     // add `accumulatedDrivingTimeSinceLastBreak` to the URL query string
     if (getAccumulatedDrivingTimeSinceLastBreak() != null) {
-      joiner.add(String.format("%saccumulatedDrivingTimeSinceLastBreak%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getAccumulatedDrivingTimeSinceLastBreak()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%saccumulatedDrivingTimeSinceLastBreak%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getAccumulatedDrivingTimeSinceLastBreak()))));
     }
 
     // add `accumulatedWorkingTimeSinceLastBreak` to the URL query string
     if (getAccumulatedWorkingTimeSinceLastBreak() != null) {
-      joiner.add(String.format("%saccumulatedWorkingTimeSinceLastBreak%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getAccumulatedWorkingTimeSinceLastBreak()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%saccumulatedWorkingTimeSinceLastBreak%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getAccumulatedWorkingTimeSinceLastBreak()))));
     }
 
     return joiner.toString();

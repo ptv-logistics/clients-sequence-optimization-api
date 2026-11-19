@@ -42,9 +42,10 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   CustomerLocationAttributes.JSON_PROPERTY_POSITION_IN_ROUTE,
   CustomerLocationAttributes.JSON_PROPERTY_ROUTE_SECTION_NUMBER
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CustomerLocationAttributes {
   public static final String JSON_PROPERTY_SERVICE_TIME_PER_TRANSPORT_STOP = "serviceTimePerTransportStop";
+  @javax.annotation.Nullable
   private Integer serviceTimePerTransportStop = 0;
 
   public static final String JSON_PROPERTY_POSITION_IN_ROUTE = "positionInRoute";
@@ -56,7 +57,7 @@ public class CustomerLocationAttributes {
   public CustomerLocationAttributes() { 
   }
 
-  public CustomerLocationAttributes serviceTimePerTransportStop(Integer serviceTimePerTransportStop) {
+  public CustomerLocationAttributes serviceTimePerTransportStop(@javax.annotation.Nullable Integer serviceTimePerTransportStop) {
     this.serviceTimePerTransportStop = serviceTimePerTransportStop;
     return this;
   }
@@ -67,21 +68,21 @@ public class CustomerLocationAttributes {
    * @return serviceTimePerTransportStop
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME_PER_TRANSPORT_STOP)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME_PER_TRANSPORT_STOP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getServiceTimePerTransportStop() {
     return serviceTimePerTransportStop;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME_PER_TRANSPORT_STOP)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME_PER_TRANSPORT_STOP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setServiceTimePerTransportStop(Integer serviceTimePerTransportStop) {
+  public void setServiceTimePerTransportStop(@javax.annotation.Nullable Integer serviceTimePerTransportStop) {
     this.serviceTimePerTransportStop = serviceTimePerTransportStop;
   }
 
 
-  public CustomerLocationAttributes positionInRoute(PositionInRoute positionInRoute) {
+  public CustomerLocationAttributes positionInRoute(@javax.annotation.Nullable PositionInRoute positionInRoute) {
     this.positionInRoute = JsonNullable.<PositionInRoute>of(positionInRoute);
     return this;
   }
@@ -96,7 +97,7 @@ public class CustomerLocationAttributes {
         return positionInRoute.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_POSITION_IN_ROUTE)
+  @JsonProperty(value = JSON_PROPERTY_POSITION_IN_ROUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public JsonNullable<PositionInRoute> getPositionInRoute_JsonNullable() {
@@ -108,12 +109,12 @@ public class CustomerLocationAttributes {
     this.positionInRoute = positionInRoute;
   }
 
-  public void setPositionInRoute(PositionInRoute positionInRoute) {
+  public void setPositionInRoute(@javax.annotation.Nullable PositionInRoute positionInRoute) {
     this.positionInRoute = JsonNullable.<PositionInRoute>of(positionInRoute);
   }
 
 
-  public CustomerLocationAttributes routeSectionNumber(Integer routeSectionNumber) {
+  public CustomerLocationAttributes routeSectionNumber(@javax.annotation.Nullable Integer routeSectionNumber) {
     this.routeSectionNumber = JsonNullable.<Integer>of(routeSectionNumber);
     return this;
   }
@@ -129,7 +130,7 @@ public class CustomerLocationAttributes {
         return routeSectionNumber.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_ROUTE_SECTION_NUMBER)
+  @JsonProperty(value = JSON_PROPERTY_ROUTE_SECTION_NUMBER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public JsonNullable<Integer> getRouteSectionNumber_JsonNullable() {
@@ -141,7 +142,7 @@ public class CustomerLocationAttributes {
     this.routeSectionNumber = routeSectionNumber;
   }
 
-  public void setRouteSectionNumber(Integer routeSectionNumber) {
+  public void setRouteSectionNumber(@javax.annotation.Nullable Integer routeSectionNumber) {
     this.routeSectionNumber = JsonNullable.<Integer>of(routeSectionNumber);
   }
 
@@ -195,10 +196,7 @@ public class CustomerLocationAttributes {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -235,17 +233,17 @@ public class CustomerLocationAttributes {
 
     // add `serviceTimePerTransportStop` to the URL query string
     if (getServiceTimePerTransportStop() != null) {
-      joiner.add(String.format("%sserviceTimePerTransportStop%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getServiceTimePerTransportStop()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sserviceTimePerTransportStop%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getServiceTimePerTransportStop()))));
     }
 
     // add `positionInRoute` to the URL query string
     if (getPositionInRoute() != null) {
-      joiner.add(String.format("%spositionInRoute%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getPositionInRoute()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%spositionInRoute%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getPositionInRoute()))));
     }
 
     // add `routeSectionNumber` to the URL query string
     if (getRouteSectionNumber() != null) {
-      joiner.add(String.format("%srouteSectionNumber%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getRouteSectionNumber()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%srouteSectionNumber%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getRouteSectionNumber()))));
     }
 
     return joiner.toString();

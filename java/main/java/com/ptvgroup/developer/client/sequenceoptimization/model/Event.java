@@ -40,24 +40,28 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   Event.JSON_PROPERTY_DURATION,
   Event.JSON_PROPERTY_TRANSPORT_ID
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class Event {
   public static final String JSON_PROPERTY_TYPE = "type";
+  @javax.annotation.Nonnull
   private EventType type;
 
   public static final String JSON_PROPERTY_START_TIME = "startTime";
+  @javax.annotation.Nonnull
   private OffsetDateTime startTime;
 
   public static final String JSON_PROPERTY_DURATION = "duration";
+  @javax.annotation.Nonnull
   private Integer duration;
 
   public static final String JSON_PROPERTY_TRANSPORT_ID = "transportId";
+  @javax.annotation.Nullable
   private String transportId;
 
   public Event() { 
   }
 
-  public Event type(EventType type) {
+  public Event type(@javax.annotation.Nonnull EventType type) {
     this.type = type;
     return this;
   }
@@ -67,21 +71,21 @@ public class Event {
    * @return type
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public EventType getType() {
     return type;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setType(EventType type) {
+  public void setType(@javax.annotation.Nonnull EventType type) {
     this.type = type;
   }
 
 
-  public Event startTime(OffsetDateTime startTime) {
+  public Event startTime(@javax.annotation.Nonnull OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
@@ -91,21 +95,21 @@ public class Event {
    * @return startTime
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_START_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nonnull OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
 
-  public Event duration(Integer duration) {
+  public Event duration(@javax.annotation.Nonnull Integer duration) {
     this.duration = duration;
     return this;
   }
@@ -115,21 +119,21 @@ public class Event {
    * @return duration
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DURATION, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getDuration() {
     return duration;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DURATION, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setDuration(Integer duration) {
+  public void setDuration(@javax.annotation.Nonnull Integer duration) {
     this.duration = duration;
   }
 
 
-  public Event transportId(String transportId) {
+  public Event transportId(@javax.annotation.Nullable String transportId) {
     this.transportId = transportId;
     return this;
   }
@@ -139,16 +143,16 @@ public class Event {
    * @return transportId
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRANSPORT_ID)
+  @JsonProperty(value = JSON_PROPERTY_TRANSPORT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public String getTransportId() {
     return transportId;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRANSPORT_ID)
+  @JsonProperty(value = JSON_PROPERTY_TRANSPORT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTransportId(String transportId) {
+  public void setTransportId(@javax.annotation.Nullable String transportId) {
     this.transportId = transportId;
   }
 
@@ -193,10 +197,7 @@ public class Event {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -233,22 +234,22 @@ public class Event {
 
     // add `type` to the URL query string
     if (getType() != null) {
-      joiner.add(String.format("%stype%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getType()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%stype%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getType()))));
     }
 
     // add `startTime` to the URL query string
     if (getStartTime() != null) {
-      joiner.add(String.format("%sstartTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getStartTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sstartTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getStartTime()))));
     }
 
     // add `duration` to the URL query string
     if (getDuration() != null) {
-      joiner.add(String.format("%sduration%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getDuration()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sduration%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getDuration()))));
     }
 
     // add `transportId` to the URL query string
     if (getTransportId() != null) {
-      joiner.add(String.format("%stransportId%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getTransportId()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%stransportId%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getTransportId()))));
     }
 
     return joiner.toString();

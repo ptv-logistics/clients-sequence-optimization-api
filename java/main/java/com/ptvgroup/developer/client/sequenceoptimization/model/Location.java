@@ -51,42 +51,52 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   Location.JSON_PROPERTY_CUSTOMER_LOCATION_ATTRIBUTES,
   Location.JSON_PROPERTY_DEPOT_LOCATION_ATTRIBUTES
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class Location {
   public static final String JSON_PROPERTY_ID = "id";
+  @javax.annotation.Nonnull
   private String id;
 
   public static final String JSON_PROPERTY_TYPE = "type";
+  @javax.annotation.Nullable
   private LocationType type = LocationType.CUSTOMER;
 
   public static final String JSON_PROPERTY_LATITUDE = "latitude";
+  @javax.annotation.Nonnull
   private Double latitude;
 
   public static final String JSON_PROPERTY_LONGITUDE = "longitude";
+  @javax.annotation.Nonnull
   private Double longitude;
 
   public static final String JSON_PROPERTY_ROAD_ACCESS = "roadAccess";
+  @javax.annotation.Nullable
   private RoadAccess roadAccess;
 
   public static final String JSON_PROPERTY_INCLUDE_LAST_METERS = "includeLastMeters";
+  @javax.annotation.Nullable
   private Boolean includeLastMeters = true;
 
   public static final String JSON_PROPERTY_MATCH_SIDE_OF_STREET = "matchSideOfStreet";
+  @javax.annotation.Nullable
   private Boolean matchSideOfStreet = false;
 
   public static final String JSON_PROPERTY_OPENING_INTERVALS = "openingIntervals";
+  @javax.annotation.Nullable
   private List<TimeInterval> openingIntervals;
 
   public static final String JSON_PROPERTY_CUSTOMER_LOCATION_ATTRIBUTES = "customerLocationAttributes";
+  @javax.annotation.Nullable
   private CustomerLocationAttributes customerLocationAttributes;
 
   public static final String JSON_PROPERTY_DEPOT_LOCATION_ATTRIBUTES = "depotLocationAttributes";
+  @javax.annotation.Nullable
   private DepotLocationAttributes depotLocationAttributes;
 
   public Location() { 
   }
 
-  public Location id(String id) {
+  public Location id(@javax.annotation.Nonnull String id) {
     this.id = id;
     return this;
   }
@@ -96,21 +106,21 @@ public class Location {
    * @return id
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonProperty(value = JSON_PROPERTY_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getId() {
     return id;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonProperty(value = JSON_PROPERTY_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nonnull String id) {
     this.id = id;
   }
 
 
-  public Location type(LocationType type) {
+  public Location type(@javax.annotation.Nullable LocationType type) {
     this.type = type;
     return this;
   }
@@ -120,21 +130,21 @@ public class Location {
    * @return type
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public LocationType getType() {
     return type;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setType(LocationType type) {
+  public void setType(@javax.annotation.Nullable LocationType type) {
     this.type = type;
   }
 
 
-  public Location latitude(Double latitude) {
+  public Location latitude(@javax.annotation.Nonnull Double latitude) {
     this.latitude = latitude;
     return this;
   }
@@ -146,21 +156,21 @@ public class Location {
    * @return latitude
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_LATITUDE)
+  @JsonProperty(value = JSON_PROPERTY_LATITUDE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Double getLatitude() {
     return latitude;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LATITUDE)
+  @JsonProperty(value = JSON_PROPERTY_LATITUDE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLatitude(Double latitude) {
+  public void setLatitude(@javax.annotation.Nonnull Double latitude) {
     this.latitude = latitude;
   }
 
 
-  public Location longitude(Double longitude) {
+  public Location longitude(@javax.annotation.Nonnull Double longitude) {
     this.longitude = longitude;
     return this;
   }
@@ -172,21 +182,21 @@ public class Location {
    * @return longitude
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_LONGITUDE)
+  @JsonProperty(value = JSON_PROPERTY_LONGITUDE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Double getLongitude() {
     return longitude;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LONGITUDE)
+  @JsonProperty(value = JSON_PROPERTY_LONGITUDE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLongitude(Double longitude) {
+  public void setLongitude(@javax.annotation.Nonnull Double longitude) {
     this.longitude = longitude;
   }
 
 
-  public Location roadAccess(RoadAccess roadAccess) {
+  public Location roadAccess(@javax.annotation.Nullable RoadAccess roadAccess) {
     this.roadAccess = roadAccess;
     return this;
   }
@@ -196,21 +206,21 @@ public class Location {
    * @return roadAccess
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ROAD_ACCESS)
+  @JsonProperty(value = JSON_PROPERTY_ROAD_ACCESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public RoadAccess getRoadAccess() {
     return roadAccess;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ROAD_ACCESS)
+  @JsonProperty(value = JSON_PROPERTY_ROAD_ACCESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRoadAccess(RoadAccess roadAccess) {
+  public void setRoadAccess(@javax.annotation.Nullable RoadAccess roadAccess) {
     this.roadAccess = roadAccess;
   }
 
 
-  public Location includeLastMeters(Boolean includeLastMeters) {
+  public Location includeLastMeters(@javax.annotation.Nullable Boolean includeLastMeters) {
     this.includeLastMeters = includeLastMeters;
     return this;
   }
@@ -220,21 +230,21 @@ public class Location {
    * @return includeLastMeters
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INCLUDE_LAST_METERS)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_LAST_METERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Boolean getIncludeLastMeters() {
     return includeLastMeters;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INCLUDE_LAST_METERS)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_LAST_METERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIncludeLastMeters(Boolean includeLastMeters) {
+  public void setIncludeLastMeters(@javax.annotation.Nullable Boolean includeLastMeters) {
     this.includeLastMeters = includeLastMeters;
   }
 
 
-  public Location matchSideOfStreet(Boolean matchSideOfStreet) {
+  public Location matchSideOfStreet(@javax.annotation.Nullable Boolean matchSideOfStreet) {
     this.matchSideOfStreet = matchSideOfStreet;
     return this;
   }
@@ -244,21 +254,21 @@ public class Location {
    * @return matchSideOfStreet
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MATCH_SIDE_OF_STREET)
+  @JsonProperty(value = JSON_PROPERTY_MATCH_SIDE_OF_STREET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Boolean getMatchSideOfStreet() {
     return matchSideOfStreet;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MATCH_SIDE_OF_STREET)
+  @JsonProperty(value = JSON_PROPERTY_MATCH_SIDE_OF_STREET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMatchSideOfStreet(Boolean matchSideOfStreet) {
+  public void setMatchSideOfStreet(@javax.annotation.Nullable Boolean matchSideOfStreet) {
     this.matchSideOfStreet = matchSideOfStreet;
   }
 
 
-  public Location openingIntervals(List<TimeInterval> openingIntervals) {
+  public Location openingIntervals(@javax.annotation.Nullable List<TimeInterval> openingIntervals) {
     this.openingIntervals = openingIntervals;
     return this;
   }
@@ -276,21 +286,21 @@ public class Location {
    * @return openingIntervals
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPENING_INTERVALS)
+  @JsonProperty(value = JSON_PROPERTY_OPENING_INTERVALS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<TimeInterval> getOpeningIntervals() {
     return openingIntervals;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPENING_INTERVALS)
+  @JsonProperty(value = JSON_PROPERTY_OPENING_INTERVALS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOpeningIntervals(List<TimeInterval> openingIntervals) {
+  public void setOpeningIntervals(@javax.annotation.Nullable List<TimeInterval> openingIntervals) {
     this.openingIntervals = openingIntervals;
   }
 
 
-  public Location customerLocationAttributes(CustomerLocationAttributes customerLocationAttributes) {
+  public Location customerLocationAttributes(@javax.annotation.Nullable CustomerLocationAttributes customerLocationAttributes) {
     this.customerLocationAttributes = customerLocationAttributes;
     return this;
   }
@@ -300,21 +310,21 @@ public class Location {
    * @return customerLocationAttributes
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_LOCATION_ATTRIBUTES)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOMER_LOCATION_ATTRIBUTES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public CustomerLocationAttributes getCustomerLocationAttributes() {
     return customerLocationAttributes;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_LOCATION_ATTRIBUTES)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOMER_LOCATION_ATTRIBUTES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomerLocationAttributes(CustomerLocationAttributes customerLocationAttributes) {
+  public void setCustomerLocationAttributes(@javax.annotation.Nullable CustomerLocationAttributes customerLocationAttributes) {
     this.customerLocationAttributes = customerLocationAttributes;
   }
 
 
-  public Location depotLocationAttributes(DepotLocationAttributes depotLocationAttributes) {
+  public Location depotLocationAttributes(@javax.annotation.Nullable DepotLocationAttributes depotLocationAttributes) {
     this.depotLocationAttributes = depotLocationAttributes;
     return this;
   }
@@ -324,16 +334,16 @@ public class Location {
    * @return depotLocationAttributes
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEPOT_LOCATION_ATTRIBUTES)
+  @JsonProperty(value = JSON_PROPERTY_DEPOT_LOCATION_ATTRIBUTES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public DepotLocationAttributes getDepotLocationAttributes() {
     return depotLocationAttributes;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEPOT_LOCATION_ATTRIBUTES)
+  @JsonProperty(value = JSON_PROPERTY_DEPOT_LOCATION_ATTRIBUTES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDepotLocationAttributes(DepotLocationAttributes depotLocationAttributes) {
+  public void setDepotLocationAttributes(@javax.annotation.Nullable DepotLocationAttributes depotLocationAttributes) {
     this.depotLocationAttributes = depotLocationAttributes;
   }
 
@@ -390,10 +400,7 @@ public class Location {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -430,22 +437,22 @@ public class Location {
 
     // add `id` to the URL query string
     if (getId() != null) {
-      joiner.add(String.format("%sid%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getId()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sid%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getId()))));
     }
 
     // add `type` to the URL query string
     if (getType() != null) {
-      joiner.add(String.format("%stype%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getType()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%stype%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getType()))));
     }
 
     // add `latitude` to the URL query string
     if (getLatitude() != null) {
-      joiner.add(String.format("%slatitude%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getLatitude()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%slatitude%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getLatitude()))));
     }
 
     // add `longitude` to the URL query string
     if (getLongitude() != null) {
-      joiner.add(String.format("%slongitude%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getLongitude()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%slongitude%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getLongitude()))));
     }
 
     // add `roadAccess` to the URL query string
@@ -455,20 +462,20 @@ public class Location {
 
     // add `includeLastMeters` to the URL query string
     if (getIncludeLastMeters() != null) {
-      joiner.add(String.format("%sincludeLastMeters%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getIncludeLastMeters()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sincludeLastMeters%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getIncludeLastMeters()))));
     }
 
     // add `matchSideOfStreet` to the URL query string
     if (getMatchSideOfStreet() != null) {
-      joiner.add(String.format("%smatchSideOfStreet%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getMatchSideOfStreet()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%smatchSideOfStreet%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getMatchSideOfStreet()))));
     }
 
     // add `openingIntervals` to the URL query string
     if (getOpeningIntervals() != null) {
       for (int i = 0; i < getOpeningIntervals().size(); i++) {
         if (getOpeningIntervals().get(i) != null) {
-          joiner.add(getOpeningIntervals().get(i).toUrlQueryString(String.format("%sopeningIntervals%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getOpeningIntervals().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%sopeningIntervals%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }

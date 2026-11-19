@@ -44,24 +44,28 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   OptimizedRouteResponse.JSON_PROPERTY_ERROR,
   OptimizedRouteResponse.JSON_PROPERTY_WARNINGS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class OptimizedRouteResponse {
   public static final String JSON_PROPERTY_STATUS = "status";
+  @javax.annotation.Nonnull
   private OperationStatus status;
 
   public static final String JSON_PROPERTY_OPTIMIZED_ROUTE = "optimizedRoute";
+  @javax.annotation.Nullable
   private OptimizedRoute optimizedRoute;
 
   public static final String JSON_PROPERTY_ERROR = "error";
+  @javax.annotation.Nullable
   private ErrorResponse error;
 
   public static final String JSON_PROPERTY_WARNINGS = "warnings";
+  @javax.annotation.Nullable
   private List<Warning> warnings;
 
   public OptimizedRouteResponse() { 
   }
 
-  public OptimizedRouteResponse status(OperationStatus status) {
+  public OptimizedRouteResponse status(@javax.annotation.Nonnull OperationStatus status) {
     this.status = status;
     return this;
   }
@@ -71,21 +75,21 @@ public class OptimizedRouteResponse {
    * @return status
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OperationStatus getStatus() {
     return status;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setStatus(OperationStatus status) {
+  public void setStatus(@javax.annotation.Nonnull OperationStatus status) {
     this.status = status;
   }
 
 
-  public OptimizedRouteResponse optimizedRoute(OptimizedRoute optimizedRoute) {
+  public OptimizedRouteResponse optimizedRoute(@javax.annotation.Nullable OptimizedRoute optimizedRoute) {
     this.optimizedRoute = optimizedRoute;
     return this;
   }
@@ -95,21 +99,21 @@ public class OptimizedRouteResponse {
    * @return optimizedRoute
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPTIMIZED_ROUTE)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZED_ROUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public OptimizedRoute getOptimizedRoute() {
     return optimizedRoute;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPTIMIZED_ROUTE)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZED_ROUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOptimizedRoute(OptimizedRoute optimizedRoute) {
+  public void setOptimizedRoute(@javax.annotation.Nullable OptimizedRoute optimizedRoute) {
     this.optimizedRoute = optimizedRoute;
   }
 
 
-  public OptimizedRouteResponse error(ErrorResponse error) {
+  public OptimizedRouteResponse error(@javax.annotation.Nullable ErrorResponse error) {
     this.error = error;
     return this;
   }
@@ -119,21 +123,21 @@ public class OptimizedRouteResponse {
    * @return error
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERROR)
+  @JsonProperty(value = JSON_PROPERTY_ERROR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public ErrorResponse getError() {
     return error;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ERROR)
+  @JsonProperty(value = JSON_PROPERTY_ERROR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setError(ErrorResponse error) {
+  public void setError(@javax.annotation.Nullable ErrorResponse error) {
     this.error = error;
   }
 
 
-  public OptimizedRouteResponse warnings(List<Warning> warnings) {
+  public OptimizedRouteResponse warnings(@javax.annotation.Nullable List<Warning> warnings) {
     this.warnings = warnings;
     return this;
   }
@@ -151,16 +155,16 @@ public class OptimizedRouteResponse {
    * @return warnings
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WARNINGS)
+  @JsonProperty(value = JSON_PROPERTY_WARNINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<Warning> getWarnings() {
     return warnings;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WARNINGS)
+  @JsonProperty(value = JSON_PROPERTY_WARNINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWarnings(List<Warning> warnings) {
+  public void setWarnings(@javax.annotation.Nullable List<Warning> warnings) {
     this.warnings = warnings;
   }
 
@@ -205,10 +209,7 @@ public class OptimizedRouteResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -245,7 +246,7 @@ public class OptimizedRouteResponse {
 
     // add `status` to the URL query string
     if (getStatus() != null) {
-      joiner.add(String.format("%sstatus%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getStatus()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sstatus%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getStatus()))));
     }
 
     // add `optimizedRoute` to the URL query string
@@ -262,8 +263,8 @@ public class OptimizedRouteResponse {
     if (getWarnings() != null) {
       for (int i = 0; i < getWarnings().size(); i++) {
         if (getWarnings().get(i) != null) {
-          joiner.add(getWarnings().get(i).toUrlQueryString(String.format("%swarnings%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getWarnings().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%swarnings%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }

@@ -41,24 +41,28 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   Violation.JSON_PROPERTY_DISTANCE_EXCEEDANCE,
   Violation.JSON_PROPERTY_CAPACITY_EXCEEDANCE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class Violation {
   public static final String JSON_PROPERTY_TYPE = "type";
+  @javax.annotation.Nonnull
   private ViolationType type;
 
   public static final String JSON_PROPERTY_TIME_EXCEEDANCE = "timeExceedance";
+  @javax.annotation.Nullable
   private Integer timeExceedance;
 
   public static final String JSON_PROPERTY_DISTANCE_EXCEEDANCE = "distanceExceedance";
+  @javax.annotation.Nullable
   private Integer distanceExceedance;
 
   public static final String JSON_PROPERTY_CAPACITY_EXCEEDANCE = "capacityExceedance";
+  @javax.annotation.Nullable
   private List<Integer> capacityExceedance;
 
   public Violation() { 
   }
 
-  public Violation type(ViolationType type) {
+  public Violation type(@javax.annotation.Nonnull ViolationType type) {
     this.type = type;
     return this;
   }
@@ -68,21 +72,21 @@ public class Violation {
    * @return type
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public ViolationType getType() {
     return type;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setType(ViolationType type) {
+  public void setType(@javax.annotation.Nonnull ViolationType type) {
     this.type = type;
   }
 
 
-  public Violation timeExceedance(Integer timeExceedance) {
+  public Violation timeExceedance(@javax.annotation.Nullable Integer timeExceedance) {
     this.timeExceedance = timeExceedance;
     return this;
   }
@@ -92,21 +96,21 @@ public class Violation {
    * @return timeExceedance
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TIME_EXCEEDANCE)
+  @JsonProperty(value = JSON_PROPERTY_TIME_EXCEEDANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getTimeExceedance() {
     return timeExceedance;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TIME_EXCEEDANCE)
+  @JsonProperty(value = JSON_PROPERTY_TIME_EXCEEDANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTimeExceedance(Integer timeExceedance) {
+  public void setTimeExceedance(@javax.annotation.Nullable Integer timeExceedance) {
     this.timeExceedance = timeExceedance;
   }
 
 
-  public Violation distanceExceedance(Integer distanceExceedance) {
+  public Violation distanceExceedance(@javax.annotation.Nullable Integer distanceExceedance) {
     this.distanceExceedance = distanceExceedance;
     return this;
   }
@@ -116,21 +120,21 @@ public class Violation {
    * @return distanceExceedance
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISTANCE_EXCEEDANCE)
+  @JsonProperty(value = JSON_PROPERTY_DISTANCE_EXCEEDANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getDistanceExceedance() {
     return distanceExceedance;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISTANCE_EXCEEDANCE)
+  @JsonProperty(value = JSON_PROPERTY_DISTANCE_EXCEEDANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDistanceExceedance(Integer distanceExceedance) {
+  public void setDistanceExceedance(@javax.annotation.Nullable Integer distanceExceedance) {
     this.distanceExceedance = distanceExceedance;
   }
 
 
-  public Violation capacityExceedance(List<Integer> capacityExceedance) {
+  public Violation capacityExceedance(@javax.annotation.Nullable List<Integer> capacityExceedance) {
     this.capacityExceedance = capacityExceedance;
     return this;
   }
@@ -148,16 +152,16 @@ public class Violation {
    * @return capacityExceedance
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAPACITY_EXCEEDANCE)
+  @JsonProperty(value = JSON_PROPERTY_CAPACITY_EXCEEDANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<Integer> getCapacityExceedance() {
     return capacityExceedance;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAPACITY_EXCEEDANCE)
+  @JsonProperty(value = JSON_PROPERTY_CAPACITY_EXCEEDANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCapacityExceedance(List<Integer> capacityExceedance) {
+  public void setCapacityExceedance(@javax.annotation.Nullable List<Integer> capacityExceedance) {
     this.capacityExceedance = capacityExceedance;
   }
 
@@ -202,10 +206,7 @@ public class Violation {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -242,25 +243,25 @@ public class Violation {
 
     // add `type` to the URL query string
     if (getType() != null) {
-      joiner.add(String.format("%stype%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getType()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%stype%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getType()))));
     }
 
     // add `timeExceedance` to the URL query string
     if (getTimeExceedance() != null) {
-      joiner.add(String.format("%stimeExceedance%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getTimeExceedance()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%stimeExceedance%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getTimeExceedance()))));
     }
 
     // add `distanceExceedance` to the URL query string
     if (getDistanceExceedance() != null) {
-      joiner.add(String.format("%sdistanceExceedance%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getDistanceExceedance()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sdistanceExceedance%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getDistanceExceedance()))));
     }
 
     // add `capacityExceedance` to the URL query string
     if (getCapacityExceedance() != null) {
       for (int i = 0; i < getCapacityExceedance().size(); i++) {
-        joiner.add(String.format("%scapacityExceedance%s%s=%s", prefix, suffix,
-            "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix),
-            URLEncoder.encode(ApiClient.valueToString(getCapacityExceedance().get(i)), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+        joiner.add(String.format(java.util.Locale.ROOT, "%scapacityExceedance%s%s=%s", prefix, suffix,
+            "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix),
+            ApiClient.urlEncode(ApiClient.valueToString(getCapacityExceedance().get(i)))));
       }
     }
 

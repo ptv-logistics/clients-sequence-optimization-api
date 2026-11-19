@@ -37,21 +37,24 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   WayReport.JSON_PROPERTY_DRIVING_TIME,
   WayReport.JSON_PROPERTY_BREAK_TIME
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class WayReport {
   public static final String JSON_PROPERTY_DISTANCE = "distance";
+  @javax.annotation.Nonnull
   private Integer distance;
 
   public static final String JSON_PROPERTY_DRIVING_TIME = "drivingTime";
+  @javax.annotation.Nonnull
   private Integer drivingTime;
 
   public static final String JSON_PROPERTY_BREAK_TIME = "breakTime";
+  @javax.annotation.Nonnull
   private Integer breakTime;
 
   public WayReport() { 
   }
 
-  public WayReport distance(Integer distance) {
+  public WayReport distance(@javax.annotation.Nonnull Integer distance) {
     this.distance = distance;
     return this;
   }
@@ -61,21 +64,21 @@ public class WayReport {
    * @return distance
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_DISTANCE)
+  @JsonProperty(value = JSON_PROPERTY_DISTANCE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getDistance() {
     return distance;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISTANCE)
+  @JsonProperty(value = JSON_PROPERTY_DISTANCE, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setDistance(Integer distance) {
+  public void setDistance(@javax.annotation.Nonnull Integer distance) {
     this.distance = distance;
   }
 
 
-  public WayReport drivingTime(Integer drivingTime) {
+  public WayReport drivingTime(@javax.annotation.Nonnull Integer drivingTime) {
     this.drivingTime = drivingTime;
     return this;
   }
@@ -85,21 +88,21 @@ public class WayReport {
    * @return drivingTime
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_DRIVING_TIME)
+  @JsonProperty(value = JSON_PROPERTY_DRIVING_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getDrivingTime() {
     return drivingTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DRIVING_TIME)
+  @JsonProperty(value = JSON_PROPERTY_DRIVING_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setDrivingTime(Integer drivingTime) {
+  public void setDrivingTime(@javax.annotation.Nonnull Integer drivingTime) {
     this.drivingTime = drivingTime;
   }
 
 
-  public WayReport breakTime(Integer breakTime) {
+  public WayReport breakTime(@javax.annotation.Nonnull Integer breakTime) {
     this.breakTime = breakTime;
     return this;
   }
@@ -109,16 +112,16 @@ public class WayReport {
    * @return breakTime
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_BREAK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_BREAK_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getBreakTime() {
     return breakTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BREAK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_BREAK_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setBreakTime(Integer breakTime) {
+  public void setBreakTime(@javax.annotation.Nonnull Integer breakTime) {
     this.breakTime = breakTime;
   }
 
@@ -161,10 +164,7 @@ public class WayReport {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -201,17 +201,17 @@ public class WayReport {
 
     // add `distance` to the URL query string
     if (getDistance() != null) {
-      joiner.add(String.format("%sdistance%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getDistance()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sdistance%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getDistance()))));
     }
 
     // add `drivingTime` to the URL query string
     if (getDrivingTime() != null) {
-      joiner.add(String.format("%sdrivingTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getDrivingTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sdrivingTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getDrivingTime()))));
     }
 
     // add `breakTime` to the URL query string
     if (getBreakTime() != null) {
-      joiner.add(String.format("%sbreakTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getBreakTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sbreakTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getBreakTime()))));
     }
 
     return joiner.toString();

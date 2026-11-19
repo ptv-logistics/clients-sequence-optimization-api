@@ -47,24 +47,30 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   Transport.JSON_PROPERTY_DELIVERY_SERVICE_TIME,
   Transport.JSON_PROPERTY_PRIORITY
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class Transport {
   public static final String JSON_PROPERTY_ID = "id";
+  @javax.annotation.Nonnull
   private String id;
 
   public static final String JSON_PROPERTY_QUANTITIES = "quantities";
+  @javax.annotation.Nullable
   private List<Integer> quantities;
 
   public static final String JSON_PROPERTY_PICKUP_LOCATION_ID = "pickupLocationId";
+  @javax.annotation.Nonnull
   private String pickupLocationId;
 
   public static final String JSON_PROPERTY_PICKUP_SERVICE_TIME = "pickupServiceTime";
+  @javax.annotation.Nullable
   private Integer pickupServiceTime = 0;
 
   public static final String JSON_PROPERTY_DELIVERY_LOCATION_ID = "deliveryLocationId";
+  @javax.annotation.Nonnull
   private String deliveryLocationId;
 
   public static final String JSON_PROPERTY_DELIVERY_SERVICE_TIME = "deliveryServiceTime";
+  @javax.annotation.Nullable
   private Integer deliveryServiceTime = 0;
 
   public static final String JSON_PROPERTY_PRIORITY = "priority";
@@ -73,7 +79,7 @@ public class Transport {
   public Transport() { 
   }
 
-  public Transport id(String id) {
+  public Transport id(@javax.annotation.Nonnull String id) {
     this.id = id;
     return this;
   }
@@ -83,21 +89,21 @@ public class Transport {
    * @return id
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonProperty(value = JSON_PROPERTY_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getId() {
     return id;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonProperty(value = JSON_PROPERTY_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nonnull String id) {
     this.id = id;
   }
 
 
-  public Transport quantities(List<Integer> quantities) {
+  public Transport quantities(@javax.annotation.Nullable List<Integer> quantities) {
     this.quantities = quantities;
     return this;
   }
@@ -115,21 +121,21 @@ public class Transport {
    * @return quantities
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_QUANTITIES)
+  @JsonProperty(value = JSON_PROPERTY_QUANTITIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<Integer> getQuantities() {
     return quantities;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_QUANTITIES)
+  @JsonProperty(value = JSON_PROPERTY_QUANTITIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setQuantities(List<Integer> quantities) {
+  public void setQuantities(@javax.annotation.Nullable List<Integer> quantities) {
     this.quantities = quantities;
   }
 
 
-  public Transport pickupLocationId(String pickupLocationId) {
+  public Transport pickupLocationId(@javax.annotation.Nonnull String pickupLocationId) {
     this.pickupLocationId = pickupLocationId;
     return this;
   }
@@ -139,21 +145,21 @@ public class Transport {
    * @return pickupLocationId
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_PICKUP_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_PICKUP_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getPickupLocationId() {
     return pickupLocationId;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PICKUP_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_PICKUP_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setPickupLocationId(String pickupLocationId) {
+  public void setPickupLocationId(@javax.annotation.Nonnull String pickupLocationId) {
     this.pickupLocationId = pickupLocationId;
   }
 
 
-  public Transport pickupServiceTime(Integer pickupServiceTime) {
+  public Transport pickupServiceTime(@javax.annotation.Nullable Integer pickupServiceTime) {
     this.pickupServiceTime = pickupServiceTime;
     return this;
   }
@@ -164,21 +170,21 @@ public class Transport {
    * @return pickupServiceTime
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PICKUP_SERVICE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_PICKUP_SERVICE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getPickupServiceTime() {
     return pickupServiceTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PICKUP_SERVICE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_PICKUP_SERVICE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPickupServiceTime(Integer pickupServiceTime) {
+  public void setPickupServiceTime(@javax.annotation.Nullable Integer pickupServiceTime) {
     this.pickupServiceTime = pickupServiceTime;
   }
 
 
-  public Transport deliveryLocationId(String deliveryLocationId) {
+  public Transport deliveryLocationId(@javax.annotation.Nonnull String deliveryLocationId) {
     this.deliveryLocationId = deliveryLocationId;
     return this;
   }
@@ -188,21 +194,21 @@ public class Transport {
    * @return deliveryLocationId
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_DELIVERY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getDeliveryLocationId() {
     return deliveryLocationId;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DELIVERY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setDeliveryLocationId(String deliveryLocationId) {
+  public void setDeliveryLocationId(@javax.annotation.Nonnull String deliveryLocationId) {
     this.deliveryLocationId = deliveryLocationId;
   }
 
 
-  public Transport deliveryServiceTime(Integer deliveryServiceTime) {
+  public Transport deliveryServiceTime(@javax.annotation.Nullable Integer deliveryServiceTime) {
     this.deliveryServiceTime = deliveryServiceTime;
     return this;
   }
@@ -213,21 +219,21 @@ public class Transport {
    * @return deliveryServiceTime
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DELIVERY_SERVICE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_SERVICE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getDeliveryServiceTime() {
     return deliveryServiceTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DELIVERY_SERVICE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_SERVICE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliveryServiceTime(Integer deliveryServiceTime) {
+  public void setDeliveryServiceTime(@javax.annotation.Nullable Integer deliveryServiceTime) {
     this.deliveryServiceTime = deliveryServiceTime;
   }
 
 
-  public Transport priority(Integer priority) {
+  public Transport priority(@javax.annotation.Nullable Integer priority) {
     this.priority = JsonNullable.<Integer>of(priority);
     return this;
   }
@@ -244,7 +250,7 @@ public class Transport {
         return priority.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_PRIORITY)
+  @JsonProperty(value = JSON_PROPERTY_PRIORITY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public JsonNullable<Integer> getPriority_JsonNullable() {
@@ -256,7 +262,7 @@ public class Transport {
     this.priority = priority;
   }
 
-  public void setPriority(Integer priority) {
+  public void setPriority(@javax.annotation.Nullable Integer priority) {
     this.priority = JsonNullable.<Integer>of(priority);
   }
 
@@ -318,10 +324,7 @@ public class Transport {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -358,41 +361,41 @@ public class Transport {
 
     // add `id` to the URL query string
     if (getId() != null) {
-      joiner.add(String.format("%sid%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getId()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sid%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getId()))));
     }
 
     // add `quantities` to the URL query string
     if (getQuantities() != null) {
       for (int i = 0; i < getQuantities().size(); i++) {
-        joiner.add(String.format("%squantities%s%s=%s", prefix, suffix,
-            "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix),
-            URLEncoder.encode(ApiClient.valueToString(getQuantities().get(i)), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+        joiner.add(String.format(java.util.Locale.ROOT, "%squantities%s%s=%s", prefix, suffix,
+            "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix),
+            ApiClient.urlEncode(ApiClient.valueToString(getQuantities().get(i)))));
       }
     }
 
     // add `pickupLocationId` to the URL query string
     if (getPickupLocationId() != null) {
-      joiner.add(String.format("%spickupLocationId%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getPickupLocationId()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%spickupLocationId%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getPickupLocationId()))));
     }
 
     // add `pickupServiceTime` to the URL query string
     if (getPickupServiceTime() != null) {
-      joiner.add(String.format("%spickupServiceTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getPickupServiceTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%spickupServiceTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getPickupServiceTime()))));
     }
 
     // add `deliveryLocationId` to the URL query string
     if (getDeliveryLocationId() != null) {
-      joiner.add(String.format("%sdeliveryLocationId%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getDeliveryLocationId()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sdeliveryLocationId%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getDeliveryLocationId()))));
     }
 
     // add `deliveryServiceTime` to the URL query string
     if (getDeliveryServiceTime() != null) {
-      joiner.add(String.format("%sdeliveryServiceTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getDeliveryServiceTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sdeliveryServiceTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getDeliveryServiceTime()))));
     }
 
     // add `priority` to the URL query string
     if (getPriority() != null) {
-      joiner.add(String.format("%spriority%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getPriority()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%spriority%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getPriority()))));
     }
 
     return joiner.toString();

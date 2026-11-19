@@ -48,30 +48,36 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   OptimizationRequest.JSON_PROPERTY_ROUTE,
   OptimizationRequest.JSON_PROPERTY_RESTRICTIONS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class OptimizationRequest {
   public static final String JSON_PROPERTY_LOCATIONS = "locations";
+  @javax.annotation.Nonnull
   private List<Location> locations;
 
   public static final String JSON_PROPERTY_VEHICLE = "vehicle";
+  @javax.annotation.Nullable
   private Vehicle vehicle;
 
   public static final String JSON_PROPERTY_DRIVER = "driver";
+  @javax.annotation.Nonnull
   private Driver driver;
 
   public static final String JSON_PROPERTY_TRANSPORTS = "transports";
+  @javax.annotation.Nonnull
   private List<Transport> transports;
 
   public static final String JSON_PROPERTY_ROUTE = "route";
+  @javax.annotation.Nullable
   private List<Stop> route;
 
   public static final String JSON_PROPERTY_RESTRICTIONS = "restrictions";
+  @javax.annotation.Nullable
   private Restrictions restrictions;
 
   public OptimizationRequest() { 
   }
 
-  public OptimizationRequest locations(List<Location> locations) {
+  public OptimizationRequest locations(@javax.annotation.Nonnull List<Location> locations) {
     this.locations = locations;
     return this;
   }
@@ -89,21 +95,21 @@ public class OptimizationRequest {
    * @return locations
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_LOCATIONS)
+  @JsonProperty(value = JSON_PROPERTY_LOCATIONS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<Location> getLocations() {
     return locations;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOCATIONS)
+  @JsonProperty(value = JSON_PROPERTY_LOCATIONS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLocations(List<Location> locations) {
+  public void setLocations(@javax.annotation.Nonnull List<Location> locations) {
     this.locations = locations;
   }
 
 
-  public OptimizationRequest vehicle(Vehicle vehicle) {
+  public OptimizationRequest vehicle(@javax.annotation.Nullable Vehicle vehicle) {
     this.vehicle = vehicle;
     return this;
   }
@@ -113,21 +119,21 @@ public class OptimizationRequest {
    * @return vehicle
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VEHICLE)
+  @JsonProperty(value = JSON_PROPERTY_VEHICLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Vehicle getVehicle() {
     return vehicle;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VEHICLE)
+  @JsonProperty(value = JSON_PROPERTY_VEHICLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVehicle(Vehicle vehicle) {
+  public void setVehicle(@javax.annotation.Nullable Vehicle vehicle) {
     this.vehicle = vehicle;
   }
 
 
-  public OptimizationRequest driver(Driver driver) {
+  public OptimizationRequest driver(@javax.annotation.Nonnull Driver driver) {
     this.driver = driver;
     return this;
   }
@@ -137,21 +143,21 @@ public class OptimizationRequest {
    * @return driver
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_DRIVER)
+  @JsonProperty(value = JSON_PROPERTY_DRIVER, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Driver getDriver() {
     return driver;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DRIVER)
+  @JsonProperty(value = JSON_PROPERTY_DRIVER, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setDriver(Driver driver) {
+  public void setDriver(@javax.annotation.Nonnull Driver driver) {
     this.driver = driver;
   }
 
 
-  public OptimizationRequest transports(List<Transport> transports) {
+  public OptimizationRequest transports(@javax.annotation.Nonnull List<Transport> transports) {
     this.transports = transports;
     return this;
   }
@@ -169,21 +175,21 @@ public class OptimizationRequest {
    * @return transports
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_TRANSPORTS)
+  @JsonProperty(value = JSON_PROPERTY_TRANSPORTS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<Transport> getTransports() {
     return transports;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRANSPORTS)
+  @JsonProperty(value = JSON_PROPERTY_TRANSPORTS, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setTransports(List<Transport> transports) {
+  public void setTransports(@javax.annotation.Nonnull List<Transport> transports) {
     this.transports = transports;
   }
 
 
-  public OptimizationRequest route(List<Stop> route) {
+  public OptimizationRequest route(@javax.annotation.Nullable List<Stop> route) {
     this.route = route;
     return this;
   }
@@ -201,21 +207,21 @@ public class OptimizationRequest {
    * @return route
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ROUTE)
+  @JsonProperty(value = JSON_PROPERTY_ROUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<Stop> getRoute() {
     return route;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ROUTE)
+  @JsonProperty(value = JSON_PROPERTY_ROUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRoute(List<Stop> route) {
+  public void setRoute(@javax.annotation.Nullable List<Stop> route) {
     this.route = route;
   }
 
 
-  public OptimizationRequest restrictions(Restrictions restrictions) {
+  public OptimizationRequest restrictions(@javax.annotation.Nullable Restrictions restrictions) {
     this.restrictions = restrictions;
     return this;
   }
@@ -225,16 +231,16 @@ public class OptimizationRequest {
    * @return restrictions
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RESTRICTIONS)
+  @JsonProperty(value = JSON_PROPERTY_RESTRICTIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Restrictions getRestrictions() {
     return restrictions;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RESTRICTIONS)
+  @JsonProperty(value = JSON_PROPERTY_RESTRICTIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRestrictions(Restrictions restrictions) {
+  public void setRestrictions(@javax.annotation.Nullable Restrictions restrictions) {
     this.restrictions = restrictions;
   }
 
@@ -283,10 +289,7 @@ public class OptimizationRequest {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -325,8 +328,8 @@ public class OptimizationRequest {
     if (getLocations() != null) {
       for (int i = 0; i < getLocations().size(); i++) {
         if (getLocations().get(i) != null) {
-          joiner.add(getLocations().get(i).toUrlQueryString(String.format("%slocations%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getLocations().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%slocations%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }
@@ -345,8 +348,8 @@ public class OptimizationRequest {
     if (getTransports() != null) {
       for (int i = 0; i < getTransports().size(); i++) {
         if (getTransports().get(i) != null) {
-          joiner.add(getTransports().get(i).toUrlQueryString(String.format("%stransports%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getTransports().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%stransports%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }
@@ -355,8 +358,8 @@ public class OptimizationRequest {
     if (getRoute() != null) {
       for (int i = 0; i < getRoute().size(); i++) {
         if (getRoute().get(i) != null) {
-          joiner.add(getRoute().get(i).toUrlQueryString(String.format("%sroute%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getRoute().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%sroute%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }

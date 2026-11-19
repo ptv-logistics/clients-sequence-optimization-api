@@ -49,33 +49,42 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   Stop.JSON_PROPERTY_VIOLATIONS_ON_WAY_TO_STOP,
   Stop.JSON_PROPERTY_VIOLATIONS_AT_STOP
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class Stop {
   public static final String JSON_PROPERTY_LOCATION_ID = "locationId";
+  @javax.annotation.Nonnull
   private String locationId;
 
   public static final String JSON_PROPERTY_DELIVERY_IDS = "deliveryIds";
+  @javax.annotation.Nullable
   private List<String> deliveryIds;
 
   public static final String JSON_PROPERTY_PICKUP_IDS = "pickupIds";
+  @javax.annotation.Nullable
   private List<String> pickupIds;
 
   public static final String JSON_PROPERTY_REPORT_FOR_WAY_TO_STOP = "reportForWayToStop";
+  @javax.annotation.Nonnull
   private WayReport reportForWayToStop;
 
   public static final String JSON_PROPERTY_REPORT_FOR_STOP = "reportForStop";
+  @javax.annotation.Nonnull
   private StopReport reportForStop;
 
   public static final String JSON_PROPERTY_EVENTS_ON_WAY_TO_STOP = "eventsOnWayToStop";
+  @javax.annotation.Nonnull
   private List<Event> eventsOnWayToStop;
 
   public static final String JSON_PROPERTY_EVENTS_AT_STOP = "eventsAtStop";
+  @javax.annotation.Nonnull
   private List<Event> eventsAtStop;
 
   public static final String JSON_PROPERTY_VIOLATIONS_ON_WAY_TO_STOP = "violationsOnWayToStop";
+  @javax.annotation.Nonnull
   private List<Violation> violationsOnWayToStop;
 
   public static final String JSON_PROPERTY_VIOLATIONS_AT_STOP = "violationsAtStop";
+  @javax.annotation.Nonnull
   private List<Violation> violationsAtStop;
 
   public Stop() { 
@@ -99,7 +108,7 @@ public class Stop {
     this.violationsAtStop = violationsAtStop;
   }
 
-  public Stop locationId(String locationId) {
+  public Stop locationId(@javax.annotation.Nonnull String locationId) {
     this.locationId = locationId;
     return this;
   }
@@ -109,21 +118,21 @@ public class Stop {
    * @return locationId
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public String getLocationId() {
     return locationId;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOCATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLocationId(String locationId) {
+  public void setLocationId(@javax.annotation.Nonnull String locationId) {
     this.locationId = locationId;
   }
 
 
-  public Stop deliveryIds(List<String> deliveryIds) {
+  public Stop deliveryIds(@javax.annotation.Nullable List<String> deliveryIds) {
     this.deliveryIds = deliveryIds;
     return this;
   }
@@ -141,21 +150,21 @@ public class Stop {
    * @return deliveryIds
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DELIVERY_IDS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<String> getDeliveryIds() {
     return deliveryIds;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DELIVERY_IDS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliveryIds(List<String> deliveryIds) {
+  public void setDeliveryIds(@javax.annotation.Nullable List<String> deliveryIds) {
     this.deliveryIds = deliveryIds;
   }
 
 
-  public Stop pickupIds(List<String> pickupIds) {
+  public Stop pickupIds(@javax.annotation.Nullable List<String> pickupIds) {
     this.pickupIds = pickupIds;
     return this;
   }
@@ -173,16 +182,16 @@ public class Stop {
    * @return pickupIds
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PICKUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PICKUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<String> getPickupIds() {
     return pickupIds;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PICKUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PICKUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPickupIds(List<String> pickupIds) {
+  public void setPickupIds(@javax.annotation.Nullable List<String> pickupIds) {
     this.pickupIds = pickupIds;
   }
 
@@ -192,7 +201,7 @@ public class Stop {
    * @return reportForWayToStop
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_REPORT_FOR_WAY_TO_STOP)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_FOR_WAY_TO_STOP, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public WayReport getReportForWayToStop() {
     return reportForWayToStop;
@@ -206,7 +215,7 @@ public class Stop {
    * @return reportForStop
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_REPORT_FOR_STOP)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_FOR_STOP, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public StopReport getReportForStop() {
     return reportForStop;
@@ -220,7 +229,7 @@ public class Stop {
    * @return eventsOnWayToStop
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_EVENTS_ON_WAY_TO_STOP)
+  @JsonProperty(value = JSON_PROPERTY_EVENTS_ON_WAY_TO_STOP, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<Event> getEventsOnWayToStop() {
     return eventsOnWayToStop;
@@ -234,7 +243,7 @@ public class Stop {
    * @return eventsAtStop
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_EVENTS_AT_STOP)
+  @JsonProperty(value = JSON_PROPERTY_EVENTS_AT_STOP, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<Event> getEventsAtStop() {
     return eventsAtStop;
@@ -248,7 +257,7 @@ public class Stop {
    * @return violationsOnWayToStop
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_VIOLATIONS_ON_WAY_TO_STOP)
+  @JsonProperty(value = JSON_PROPERTY_VIOLATIONS_ON_WAY_TO_STOP, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<Violation> getViolationsOnWayToStop() {
     return violationsOnWayToStop;
@@ -262,7 +271,7 @@ public class Stop {
    * @return violationsAtStop
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_VIOLATIONS_AT_STOP)
+  @JsonProperty(value = JSON_PROPERTY_VIOLATIONS_AT_STOP, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public List<Violation> getViolationsAtStop() {
     return violationsAtStop;
@@ -321,10 +330,7 @@ public class Stop {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -361,24 +367,24 @@ public class Stop {
 
     // add `locationId` to the URL query string
     if (getLocationId() != null) {
-      joiner.add(String.format("%slocationId%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getLocationId()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%slocationId%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getLocationId()))));
     }
 
     // add `deliveryIds` to the URL query string
     if (getDeliveryIds() != null) {
       for (int i = 0; i < getDeliveryIds().size(); i++) {
-        joiner.add(String.format("%sdeliveryIds%s%s=%s", prefix, suffix,
-            "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix),
-            URLEncoder.encode(ApiClient.valueToString(getDeliveryIds().get(i)), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+        joiner.add(String.format(java.util.Locale.ROOT, "%sdeliveryIds%s%s=%s", prefix, suffix,
+            "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix),
+            ApiClient.urlEncode(ApiClient.valueToString(getDeliveryIds().get(i)))));
       }
     }
 
     // add `pickupIds` to the URL query string
     if (getPickupIds() != null) {
       for (int i = 0; i < getPickupIds().size(); i++) {
-        joiner.add(String.format("%spickupIds%s%s=%s", prefix, suffix,
-            "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix),
-            URLEncoder.encode(ApiClient.valueToString(getPickupIds().get(i)), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+        joiner.add(String.format(java.util.Locale.ROOT, "%spickupIds%s%s=%s", prefix, suffix,
+            "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix),
+            ApiClient.urlEncode(ApiClient.valueToString(getPickupIds().get(i)))));
       }
     }
 
@@ -396,8 +402,8 @@ public class Stop {
     if (getEventsOnWayToStop() != null) {
       for (int i = 0; i < getEventsOnWayToStop().size(); i++) {
         if (getEventsOnWayToStop().get(i) != null) {
-          joiner.add(getEventsOnWayToStop().get(i).toUrlQueryString(String.format("%seventsOnWayToStop%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getEventsOnWayToStop().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%seventsOnWayToStop%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }
@@ -406,8 +412,8 @@ public class Stop {
     if (getEventsAtStop() != null) {
       for (int i = 0; i < getEventsAtStop().size(); i++) {
         if (getEventsAtStop().get(i) != null) {
-          joiner.add(getEventsAtStop().get(i).toUrlQueryString(String.format("%seventsAtStop%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getEventsAtStop().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%seventsAtStop%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }
@@ -416,8 +422,8 @@ public class Stop {
     if (getViolationsOnWayToStop() != null) {
       for (int i = 0; i < getViolationsOnWayToStop().size(); i++) {
         if (getViolationsOnWayToStop().get(i) != null) {
-          joiner.add(getViolationsOnWayToStop().get(i).toUrlQueryString(String.format("%sviolationsOnWayToStop%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getViolationsOnWayToStop().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%sviolationsOnWayToStop%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }
@@ -426,8 +432,8 @@ public class Stop {
     if (getViolationsAtStop() != null) {
       for (int i = 0; i < getViolationsAtStop().size(); i++) {
         if (getViolationsAtStop().get(i) != null) {
-          joiner.add(getViolationsAtStop().get(i).toUrlQueryString(String.format("%sviolationsAtStop%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getViolationsAtStop().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%sviolationsAtStop%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }

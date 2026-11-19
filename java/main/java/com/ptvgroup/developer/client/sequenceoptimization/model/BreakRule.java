@@ -42,9 +42,10 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   BreakRule.JSON_PROPERTY_MAXIMUM_WORKING_TIME_BETWEEN_BREAKS,
   BreakRule.JSON_PROPERTY_WORKING_TIME_THRESHOLD
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class BreakRule {
   public static final String JSON_PROPERTY_BREAK_TIME = "breakTime";
+  @javax.annotation.Nonnull
   private Integer breakTime;
 
   public static final String JSON_PROPERTY_MAXIMUM_DRIVING_TIME_BETWEEN_BREAKS = "maximumDrivingTimeBetweenBreaks";
@@ -54,12 +55,13 @@ public class BreakRule {
   private JsonNullable<Integer> maximumWorkingTimeBetweenBreaks = JsonNullable.<Integer>undefined();
 
   public static final String JSON_PROPERTY_WORKING_TIME_THRESHOLD = "workingTimeThreshold";
+  @javax.annotation.Nullable
   private Integer workingTimeThreshold = 0;
 
   public BreakRule() { 
   }
 
-  public BreakRule breakTime(Integer breakTime) {
+  public BreakRule breakTime(@javax.annotation.Nonnull Integer breakTime) {
     this.breakTime = breakTime;
     return this;
   }
@@ -71,21 +73,21 @@ public class BreakRule {
    * @return breakTime
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_BREAK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_BREAK_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getBreakTime() {
     return breakTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BREAK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_BREAK_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setBreakTime(Integer breakTime) {
+  public void setBreakTime(@javax.annotation.Nonnull Integer breakTime) {
     this.breakTime = breakTime;
   }
 
 
-  public BreakRule maximumDrivingTimeBetweenBreaks(Integer maximumDrivingTimeBetweenBreaks) {
+  public BreakRule maximumDrivingTimeBetweenBreaks(@javax.annotation.Nullable Integer maximumDrivingTimeBetweenBreaks) {
     this.maximumDrivingTimeBetweenBreaks = JsonNullable.<Integer>of(maximumDrivingTimeBetweenBreaks);
     return this;
   }
@@ -101,7 +103,7 @@ public class BreakRule {
         return maximumDrivingTimeBetweenBreaks.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_MAXIMUM_DRIVING_TIME_BETWEEN_BREAKS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMUM_DRIVING_TIME_BETWEEN_BREAKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public JsonNullable<Integer> getMaximumDrivingTimeBetweenBreaks_JsonNullable() {
@@ -113,12 +115,12 @@ public class BreakRule {
     this.maximumDrivingTimeBetweenBreaks = maximumDrivingTimeBetweenBreaks;
   }
 
-  public void setMaximumDrivingTimeBetweenBreaks(Integer maximumDrivingTimeBetweenBreaks) {
+  public void setMaximumDrivingTimeBetweenBreaks(@javax.annotation.Nullable Integer maximumDrivingTimeBetweenBreaks) {
     this.maximumDrivingTimeBetweenBreaks = JsonNullable.<Integer>of(maximumDrivingTimeBetweenBreaks);
   }
 
 
-  public BreakRule maximumWorkingTimeBetweenBreaks(Integer maximumWorkingTimeBetweenBreaks) {
+  public BreakRule maximumWorkingTimeBetweenBreaks(@javax.annotation.Nullable Integer maximumWorkingTimeBetweenBreaks) {
     this.maximumWorkingTimeBetweenBreaks = JsonNullable.<Integer>of(maximumWorkingTimeBetweenBreaks);
     return this;
   }
@@ -134,7 +136,7 @@ public class BreakRule {
         return maximumWorkingTimeBetweenBreaks.orElse(null);
   }
 
-  @JsonProperty(JSON_PROPERTY_MAXIMUM_WORKING_TIME_BETWEEN_BREAKS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMUM_WORKING_TIME_BETWEEN_BREAKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public JsonNullable<Integer> getMaximumWorkingTimeBetweenBreaks_JsonNullable() {
@@ -146,12 +148,12 @@ public class BreakRule {
     this.maximumWorkingTimeBetweenBreaks = maximumWorkingTimeBetweenBreaks;
   }
 
-  public void setMaximumWorkingTimeBetweenBreaks(Integer maximumWorkingTimeBetweenBreaks) {
+  public void setMaximumWorkingTimeBetweenBreaks(@javax.annotation.Nullable Integer maximumWorkingTimeBetweenBreaks) {
     this.maximumWorkingTimeBetweenBreaks = JsonNullable.<Integer>of(maximumWorkingTimeBetweenBreaks);
   }
 
 
-  public BreakRule workingTimeThreshold(Integer workingTimeThreshold) {
+  public BreakRule workingTimeThreshold(@javax.annotation.Nullable Integer workingTimeThreshold) {
     this.workingTimeThreshold = workingTimeThreshold;
     return this;
   }
@@ -162,16 +164,16 @@ public class BreakRule {
    * @return workingTimeThreshold
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WORKING_TIME_THRESHOLD)
+  @JsonProperty(value = JSON_PROPERTY_WORKING_TIME_THRESHOLD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getWorkingTimeThreshold() {
     return workingTimeThreshold;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WORKING_TIME_THRESHOLD)
+  @JsonProperty(value = JSON_PROPERTY_WORKING_TIME_THRESHOLD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWorkingTimeThreshold(Integer workingTimeThreshold) {
+  public void setWorkingTimeThreshold(@javax.annotation.Nullable Integer workingTimeThreshold) {
     this.workingTimeThreshold = workingTimeThreshold;
   }
 
@@ -227,10 +229,7 @@ public class BreakRule {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -267,22 +266,22 @@ public class BreakRule {
 
     // add `breakTime` to the URL query string
     if (getBreakTime() != null) {
-      joiner.add(String.format("%sbreakTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getBreakTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sbreakTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getBreakTime()))));
     }
 
     // add `maximumDrivingTimeBetweenBreaks` to the URL query string
     if (getMaximumDrivingTimeBetweenBreaks() != null) {
-      joiner.add(String.format("%smaximumDrivingTimeBetweenBreaks%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getMaximumDrivingTimeBetweenBreaks()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%smaximumDrivingTimeBetweenBreaks%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getMaximumDrivingTimeBetweenBreaks()))));
     }
 
     // add `maximumWorkingTimeBetweenBreaks` to the URL query string
     if (getMaximumWorkingTimeBetweenBreaks() != null) {
-      joiner.add(String.format("%smaximumWorkingTimeBetweenBreaks%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getMaximumWorkingTimeBetweenBreaks()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%smaximumWorkingTimeBetweenBreaks%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getMaximumWorkingTimeBetweenBreaks()))));
     }
 
     // add `workingTimeThreshold` to the URL query string
     if (getWorkingTimeThreshold() != null) {
-      joiner.add(String.format("%sworkingTimeThreshold%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getWorkingTimeThreshold()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sworkingTimeThreshold%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getWorkingTimeThreshold()))));
     }
 
     return joiner.toString();

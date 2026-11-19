@@ -43,30 +43,36 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   StopReport.JSON_PROPERTY_BREAK_TIME,
   StopReport.JSON_PROPERTY_QUANTITIES
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class StopReport {
   public static final String JSON_PROPERTY_ARRIVAL_TIME = "arrivalTime";
+  @javax.annotation.Nonnull
   private OffsetDateTime arrivalTime;
 
   public static final String JSON_PROPERTY_DEPARTURE_TIME = "departureTime";
+  @javax.annotation.Nonnull
   private OffsetDateTime departureTime;
 
   public static final String JSON_PROPERTY_SERVICE_TIME = "serviceTime";
+  @javax.annotation.Nonnull
   private Integer serviceTime;
 
   public static final String JSON_PROPERTY_WAITING_TIME = "waitingTime";
+  @javax.annotation.Nonnull
   private Integer waitingTime;
 
   public static final String JSON_PROPERTY_BREAK_TIME = "breakTime";
+  @javax.annotation.Nonnull
   private Integer breakTime;
 
   public static final String JSON_PROPERTY_QUANTITIES = "quantities";
+  @javax.annotation.Nullable
   private List<Integer> quantities;
 
   public StopReport() { 
   }
 
-  public StopReport arrivalTime(OffsetDateTime arrivalTime) {
+  public StopReport arrivalTime(@javax.annotation.Nonnull OffsetDateTime arrivalTime) {
     this.arrivalTime = arrivalTime;
     return this;
   }
@@ -76,21 +82,21 @@ public class StopReport {
    * @return arrivalTime
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ARRIVAL_TIME)
+  @JsonProperty(value = JSON_PROPERTY_ARRIVAL_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getArrivalTime() {
     return arrivalTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ARRIVAL_TIME)
+  @JsonProperty(value = JSON_PROPERTY_ARRIVAL_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setArrivalTime(OffsetDateTime arrivalTime) {
+  public void setArrivalTime(@javax.annotation.Nonnull OffsetDateTime arrivalTime) {
     this.arrivalTime = arrivalTime;
   }
 
 
-  public StopReport departureTime(OffsetDateTime departureTime) {
+  public StopReport departureTime(@javax.annotation.Nonnull OffsetDateTime departureTime) {
     this.departureTime = departureTime;
     return this;
   }
@@ -100,21 +106,21 @@ public class StopReport {
    * @return departureTime
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_DEPARTURE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_DEPARTURE_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public OffsetDateTime getDepartureTime() {
     return departureTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEPARTURE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_DEPARTURE_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setDepartureTime(OffsetDateTime departureTime) {
+  public void setDepartureTime(@javax.annotation.Nonnull OffsetDateTime departureTime) {
     this.departureTime = departureTime;
   }
 
 
-  public StopReport serviceTime(Integer serviceTime) {
+  public StopReport serviceTime(@javax.annotation.Nonnull Integer serviceTime) {
     this.serviceTime = serviceTime;
     return this;
   }
@@ -124,21 +130,21 @@ public class StopReport {
    * @return serviceTime
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getServiceTime() {
     return serviceTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setServiceTime(Integer serviceTime) {
+  public void setServiceTime(@javax.annotation.Nonnull Integer serviceTime) {
     this.serviceTime = serviceTime;
   }
 
 
-  public StopReport waitingTime(Integer waitingTime) {
+  public StopReport waitingTime(@javax.annotation.Nonnull Integer waitingTime) {
     this.waitingTime = waitingTime;
     return this;
   }
@@ -148,21 +154,21 @@ public class StopReport {
    * @return waitingTime
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_WAITING_TIME)
+  @JsonProperty(value = JSON_PROPERTY_WAITING_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getWaitingTime() {
     return waitingTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WAITING_TIME)
+  @JsonProperty(value = JSON_PROPERTY_WAITING_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setWaitingTime(Integer waitingTime) {
+  public void setWaitingTime(@javax.annotation.Nonnull Integer waitingTime) {
     this.waitingTime = waitingTime;
   }
 
 
-  public StopReport breakTime(Integer breakTime) {
+  public StopReport breakTime(@javax.annotation.Nonnull Integer breakTime) {
     this.breakTime = breakTime;
     return this;
   }
@@ -172,21 +178,21 @@ public class StopReport {
    * @return breakTime
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_BREAK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_BREAK_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public Integer getBreakTime() {
     return breakTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BREAK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_BREAK_TIME, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setBreakTime(Integer breakTime) {
+  public void setBreakTime(@javax.annotation.Nonnull Integer breakTime) {
     this.breakTime = breakTime;
   }
 
 
-  public StopReport quantities(List<Integer> quantities) {
+  public StopReport quantities(@javax.annotation.Nullable List<Integer> quantities) {
     this.quantities = quantities;
     return this;
   }
@@ -204,16 +210,16 @@ public class StopReport {
    * @return quantities
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_QUANTITIES)
+  @JsonProperty(value = JSON_PROPERTY_QUANTITIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<Integer> getQuantities() {
     return quantities;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_QUANTITIES)
+  @JsonProperty(value = JSON_PROPERTY_QUANTITIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setQuantities(List<Integer> quantities) {
+  public void setQuantities(@javax.annotation.Nullable List<Integer> quantities) {
     this.quantities = quantities;
   }
 
@@ -262,10 +268,7 @@ public class StopReport {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -302,35 +305,35 @@ public class StopReport {
 
     // add `arrivalTime` to the URL query string
     if (getArrivalTime() != null) {
-      joiner.add(String.format("%sarrivalTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getArrivalTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sarrivalTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getArrivalTime()))));
     }
 
     // add `departureTime` to the URL query string
     if (getDepartureTime() != null) {
-      joiner.add(String.format("%sdepartureTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getDepartureTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sdepartureTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getDepartureTime()))));
     }
 
     // add `serviceTime` to the URL query string
     if (getServiceTime() != null) {
-      joiner.add(String.format("%sserviceTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getServiceTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sserviceTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getServiceTime()))));
     }
 
     // add `waitingTime` to the URL query string
     if (getWaitingTime() != null) {
-      joiner.add(String.format("%swaitingTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getWaitingTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%swaitingTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getWaitingTime()))));
     }
 
     // add `breakTime` to the URL query string
     if (getBreakTime() != null) {
-      joiner.add(String.format("%sbreakTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getBreakTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sbreakTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getBreakTime()))));
     }
 
     // add `quantities` to the URL query string
     if (getQuantities() != null) {
       for (int i = 0; i < getQuantities().size(); i++) {
-        joiner.add(String.format("%squantities%s%s=%s", prefix, suffix,
-            "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix),
-            URLEncoder.encode(ApiClient.valueToString(getQuantities().get(i)), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+        joiner.add(String.format(java.util.Locale.ROOT, "%squantities%s%s=%s", prefix, suffix,
+            "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix),
+            ApiClient.urlEncode(ApiClient.valueToString(getQuantities().get(i)))));
       }
     }
 

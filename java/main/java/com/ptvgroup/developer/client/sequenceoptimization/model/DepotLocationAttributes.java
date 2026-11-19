@@ -36,18 +36,20 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   DepotLocationAttributes.JSON_PROPERTY_SERVICE_TIME_PER_PICKUP_STOP,
   DepotLocationAttributes.JSON_PROPERTY_SERVICE_TIME_PER_DELIVERY_STOP
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class DepotLocationAttributes {
   public static final String JSON_PROPERTY_SERVICE_TIME_PER_PICKUP_STOP = "serviceTimePerPickupStop";
+  @javax.annotation.Nullable
   private Integer serviceTimePerPickupStop = 0;
 
   public static final String JSON_PROPERTY_SERVICE_TIME_PER_DELIVERY_STOP = "serviceTimePerDeliveryStop";
+  @javax.annotation.Nullable
   private Integer serviceTimePerDeliveryStop = 0;
 
   public DepotLocationAttributes() { 
   }
 
-  public DepotLocationAttributes serviceTimePerPickupStop(Integer serviceTimePerPickupStop) {
+  public DepotLocationAttributes serviceTimePerPickupStop(@javax.annotation.Nullable Integer serviceTimePerPickupStop) {
     this.serviceTimePerPickupStop = serviceTimePerPickupStop;
     return this;
   }
@@ -58,21 +60,21 @@ public class DepotLocationAttributes {
    * @return serviceTimePerPickupStop
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME_PER_PICKUP_STOP)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME_PER_PICKUP_STOP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getServiceTimePerPickupStop() {
     return serviceTimePerPickupStop;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME_PER_PICKUP_STOP)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME_PER_PICKUP_STOP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setServiceTimePerPickupStop(Integer serviceTimePerPickupStop) {
+  public void setServiceTimePerPickupStop(@javax.annotation.Nullable Integer serviceTimePerPickupStop) {
     this.serviceTimePerPickupStop = serviceTimePerPickupStop;
   }
 
 
-  public DepotLocationAttributes serviceTimePerDeliveryStop(Integer serviceTimePerDeliveryStop) {
+  public DepotLocationAttributes serviceTimePerDeliveryStop(@javax.annotation.Nullable Integer serviceTimePerDeliveryStop) {
     this.serviceTimePerDeliveryStop = serviceTimePerDeliveryStop;
     return this;
   }
@@ -83,16 +85,16 @@ public class DepotLocationAttributes {
    * @return serviceTimePerDeliveryStop
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME_PER_DELIVERY_STOP)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME_PER_DELIVERY_STOP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getServiceTimePerDeliveryStop() {
     return serviceTimePerDeliveryStop;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME_PER_DELIVERY_STOP)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME_PER_DELIVERY_STOP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setServiceTimePerDeliveryStop(Integer serviceTimePerDeliveryStop) {
+  public void setServiceTimePerDeliveryStop(@javax.annotation.Nullable Integer serviceTimePerDeliveryStop) {
     this.serviceTimePerDeliveryStop = serviceTimePerDeliveryStop;
   }
 
@@ -133,10 +135,7 @@ public class DepotLocationAttributes {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -173,12 +172,12 @@ public class DepotLocationAttributes {
 
     // add `serviceTimePerPickupStop` to the URL query string
     if (getServiceTimePerPickupStop() != null) {
-      joiner.add(String.format("%sserviceTimePerPickupStop%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getServiceTimePerPickupStop()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sserviceTimePerPickupStop%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getServiceTimePerPickupStop()))));
     }
 
     // add `serviceTimePerDeliveryStop` to the URL query string
     if (getServiceTimePerDeliveryStop() != null) {
-      joiner.add(String.format("%sserviceTimePerDeliveryStop%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getServiceTimePerDeliveryStop()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sserviceTimePerDeliveryStop%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getServiceTimePerDeliveryStop()))));
     }
 
     return joiner.toString();

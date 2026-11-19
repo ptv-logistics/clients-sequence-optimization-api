@@ -15,6 +15,7 @@ package com.ptvgroup.developer.client.sequenceoptimization.api;
 import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
 import com.ptvgroup.developer.client.sequenceoptimization.ApiException;
 import com.ptvgroup.developer.client.sequenceoptimization.ApiResponse;
+import com.ptvgroup.developer.client.sequenceoptimization.Configuration;
 import com.ptvgroup.developer.client.sequenceoptimization.Pair;
 
 import com.ptvgroup.developer.client.sequenceoptimization.model.ErrorResponse;
@@ -48,18 +49,38 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Consumer;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class RoutesApi {
+  /**
+   * Utility class for extending HttpRequest.Builder functionality.
+   */
+  private static class HttpRequestBuilderExtensions {
+    /**
+     * Adds additional headers to the provided HttpRequest.Builder. Useful for adding method/endpoint specific headers.
+     *
+     * @param builder the HttpRequest.Builder to which headers will be added
+     * @param headers a map of header names and values to add; may be null
+     * @return the same HttpRequest.Builder instance with the additional headers set
+     */
+    static HttpRequest.Builder withAdditionalHeaders(HttpRequest.Builder builder, Map<String, String> headers) {
+        if (headers != null) {
+            for (Map.Entry<String, String> entry : headers.entrySet()) {
+                builder.header(entry.getKey(), entry.getValue());
+            }
+        }
+        return builder;
+    }
+  }
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
   private final Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
   private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final Consumer<HttpResponse<InputStream>> memberVarAsyncResponseInterceptor;
 
   public RoutesApi() {
-    this(new ApiClient());
+    this(Configuration.getDefaultApiClient());
   }
 
   public RoutesApi(ApiClient apiClient) {
@@ -72,8 +93,17 @@ public class RoutesApi {
     memberVarAsyncResponseInterceptor = apiClient.getAsyncResponseInterceptor();
   }
 
+
   protected ApiException getApiException(String operationId, HttpResponse<InputStream> response) throws IOException {
-    String body = response.body() == null ? null : new String(response.body().readAllBytes());
+    InputStream responseBody = ApiClient.getResponseBody(response);
+    String body = null;
+    try {
+      body = responseBody == null ? null : new String(responseBody.readAllBytes());
+    } finally {
+      if (responseBody != null) {
+        responseBody.close();
+      }
+    }
     String message = formatExceptionMessage(operationId, response.statusCode(), body);
     return new ApiException(response.statusCode(), message, response.headers(), body);
   }
@@ -86,13 +116,75 @@ public class RoutesApi {
   }
 
   /**
+   * Download file from the given response.
+   *
+   * @param response Response
+   * @return File
+   * @throws ApiException If fail to read file content from response and write to disk
+   */
+  public File downloadFileFromResponse(HttpResponse<InputStream> response, InputStream responseBody) throws ApiException {
+    if (responseBody == null) {
+      throw new ApiException(new IOException("Response body is empty"));
+    }
+    try {
+      File file = prepareDownloadFile(response);
+      java.nio.file.Files.copy(responseBody, file.toPath(), java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+      return file;
+    } catch (IOException e) {
+      throw new ApiException(e);
+    }
+  }
+
+  /**
+   * <p>Prepare the file for download from the response.</p>
+   *
+   * @param response a {@link java.net.http.HttpResponse} object.
+   * @return a {@link java.io.File} object.
+   * @throws java.io.IOException if any.
+   */
+  private File prepareDownloadFile(HttpResponse<InputStream> response) throws IOException {
+    String filename = null;
+    java.util.Optional<String> contentDisposition = response.headers().firstValue("Content-Disposition");
+    if (contentDisposition.isPresent() && !"".equals(contentDisposition.get())) {
+      // Get filename from the Content-Disposition header.
+      java.util.regex.Pattern pattern = java.util.regex.Pattern.compile("filename=['\"]?([^'\"\\s]+)['\"]?");
+      java.util.regex.Matcher matcher = pattern.matcher(contentDisposition.get());
+      if (matcher.find())
+        filename = matcher.group(1);
+    }
+    File file = null;
+    if (filename != null) {
+      java.nio.file.Path tempDir = java.nio.file.Files.createTempDirectory("swagger-gen-native");
+      java.nio.file.Path filePath = java.nio.file.Files.createFile(tempDir.resolve(filename));
+      file = filePath.toFile();
+      tempDir.toFile().deleteOnExit();   // best effort cleanup
+      file.deleteOnExit(); // best effort cleanup
+    } else {
+      file = java.nio.file.Files.createTempFile("download-", "").toFile();
+      file.deleteOnExit(); // best effort cleanup
+    }
+    return file;
+  }
+
+  /**
    * 
    * Deletes the optimized route whose ID is specified.
    * @param id Unique optimized route ID. (required)
    * @throws ApiException if fails to make API call
    */
-  public void deleteOptimizedRoute(UUID id) throws ApiException {
-    deleteOptimizedRouteWithHttpInfo(id);
+  public void deleteOptimizedRoute(@javax.annotation.Nonnull UUID id) throws ApiException {
+    deleteOptimizedRoute(id, null);
+  }
+
+  /**
+   * 
+   * Deletes the optimized route whose ID is specified.
+   * @param id Unique optimized route ID. (required)
+   * @param headers Optional headers to include in the request
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteOptimizedRoute(@javax.annotation.Nonnull UUID id, Map<String, String> headers) throws ApiException {
+    deleteOptimizedRouteWithHttpInfo(id, headers);
   }
 
   /**
@@ -102,8 +194,20 @@ public class RoutesApi {
    * @return ApiResponse&lt;Void&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Void> deleteOptimizedRouteWithHttpInfo(UUID id) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = deleteOptimizedRouteRequestBuilder(id);
+  public ApiResponse<Void> deleteOptimizedRouteWithHttpInfo(@javax.annotation.Nonnull UUID id) throws ApiException {
+    return deleteOptimizedRouteWithHttpInfo(id, null);
+  }
+
+  /**
+   * 
+   * Deletes the optimized route whose ID is specified.
+   * @param id Unique optimized route ID. (required)
+   * @param headers Optional headers to include in the request
+   * @return ApiResponse&lt;Void&gt;
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Void> deleteOptimizedRouteWithHttpInfo(@javax.annotation.Nonnull UUID id, Map<String, String> headers) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = deleteOptimizedRouteRequestBuilder(id, headers);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
           localVarRequestBuilder.build(),
@@ -111,21 +215,24 @@ public class RoutesApi {
       if (memberVarResponseInterceptor != null) {
         memberVarResponseInterceptor.accept(localVarResponse);
       }
+      InputStream localVarResponseBody = null;
       try {
         if (localVarResponse.statusCode()/ 100 != 2) {
           throw getApiException("deleteOptimizedRoute", localVarResponse);
         }
-        return new ApiResponse<Void>(
-          localVarResponse.statusCode(),
-          localVarResponse.headers().map(),
-          null
+        localVarResponseBody = ApiClient.getResponseBody(localVarResponse);
+        if (localVarResponseBody != null) {
+          localVarResponseBody.readAllBytes();
+        }
+        return new ApiResponse<>(
+            localVarResponse.statusCode(),
+            localVarResponse.headers().map(),
+            null
         );
       } finally {
-        // Drain the InputStream
-        while (localVarResponse.body().read() != -1) {
-            // Ignore
+        if (localVarResponseBody != null) {
+          localVarResponseBody.close();
         }
-        localVarResponse.body().close();
       }
     } catch (IOException e) {
       throw new ApiException(e);
@@ -136,7 +243,7 @@ public class RoutesApi {
     }
   }
 
-  private HttpRequest.Builder deleteOptimizedRouteRequestBuilder(UUID id) throws ApiException {
+  private HttpRequest.Builder deleteOptimizedRouteRequestBuilder(@javax.annotation.Nonnull UUID id, Map<String, String> headers) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
       throw new ApiException(400, "Missing the required parameter 'id' when calling deleteOptimizedRoute");
@@ -155,6 +262,8 @@ public class RoutesApi {
     if (memberVarReadTimeout != null) {
       localVarRequestBuilder.timeout(memberVarReadTimeout);
     }
+    // Add custom headers if provided
+    localVarRequestBuilder = HttpRequestBuilderExtensions.withAdditionalHeaders(localVarRequestBuilder, headers);
     if (memberVarInterceptor != null) {
       memberVarInterceptor.accept(localVarRequestBuilder);
     }
@@ -168,8 +277,20 @@ public class RoutesApi {
    * @return OptimizedRouteResponse
    * @throws ApiException if fails to make API call
    */
-  public OptimizedRouteResponse getOptimizedRoute(UUID id) throws ApiException {
-    ApiResponse<OptimizedRouteResponse> localVarResponse = getOptimizedRouteWithHttpInfo(id);
+  public OptimizedRouteResponse getOptimizedRoute(@javax.annotation.Nonnull UUID id) throws ApiException {
+    return getOptimizedRoute(id, null);
+  }
+
+  /**
+   * 
+   * Retrieves the status, and if the status is SUCCEEDED, the optimized route whose ID is specified.
+   * @param id Unique optimized route ID. (required)
+   * @param headers Optional headers to include in the request
+   * @return OptimizedRouteResponse
+   * @throws ApiException if fails to make API call
+   */
+  public OptimizedRouteResponse getOptimizedRoute(@javax.annotation.Nonnull UUID id, Map<String, String> headers) throws ApiException {
+    ApiResponse<OptimizedRouteResponse> localVarResponse = getOptimizedRouteWithHttpInfo(id, headers);
     return localVarResponse.getData();
   }
 
@@ -180,8 +301,20 @@ public class RoutesApi {
    * @return ApiResponse&lt;OptimizedRouteResponse&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<OptimizedRouteResponse> getOptimizedRouteWithHttpInfo(UUID id) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = getOptimizedRouteRequestBuilder(id);
+  public ApiResponse<OptimizedRouteResponse> getOptimizedRouteWithHttpInfo(@javax.annotation.Nonnull UUID id) throws ApiException {
+    return getOptimizedRouteWithHttpInfo(id, null);
+  }
+
+  /**
+   * 
+   * Retrieves the status, and if the status is SUCCEEDED, the optimized route whose ID is specified.
+   * @param id Unique optimized route ID. (required)
+   * @param headers Optional headers to include in the request
+   * @return ApiResponse&lt;OptimizedRouteResponse&gt;
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<OptimizedRouteResponse> getOptimizedRouteWithHttpInfo(@javax.annotation.Nonnull UUID id, Map<String, String> headers) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = getOptimizedRouteRequestBuilder(id, headers);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
           localVarRequestBuilder.build(),
@@ -189,16 +322,35 @@ public class RoutesApi {
       if (memberVarResponseInterceptor != null) {
         memberVarResponseInterceptor.accept(localVarResponse);
       }
+      InputStream localVarResponseBody = null;
       try {
         if (localVarResponse.statusCode()/ 100 != 2) {
           throw getApiException("getOptimizedRoute", localVarResponse);
         }
+        localVarResponseBody = ApiClient.getResponseBody(localVarResponse);
+        if (localVarResponseBody == null) {
+          return new ApiResponse<OptimizedRouteResponse>(
+              localVarResponse.statusCode(),
+              localVarResponse.headers().map(),
+              null
+          );
+        }
+
+        
+        
+        String responseBody = new String(localVarResponseBody.readAllBytes());
+        OptimizedRouteResponse responseValue = responseBody.isBlank()? null: memberVarObjectMapper.readValue(responseBody, new TypeReference<OptimizedRouteResponse>() {});
+        
+
         return new ApiResponse<OptimizedRouteResponse>(
-          localVarResponse.statusCode(),
-          localVarResponse.headers().map(),
-          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<OptimizedRouteResponse>() {}) // closes the InputStream
+            localVarResponse.statusCode(),
+            localVarResponse.headers().map(),
+            responseValue
         );
       } finally {
+        if (localVarResponseBody != null) {
+          localVarResponseBody.close();
+        }
       }
     } catch (IOException e) {
       throw new ApiException(e);
@@ -209,7 +361,7 @@ public class RoutesApi {
     }
   }
 
-  private HttpRequest.Builder getOptimizedRouteRequestBuilder(UUID id) throws ApiException {
+  private HttpRequest.Builder getOptimizedRouteRequestBuilder(@javax.annotation.Nonnull UUID id, Map<String, String> headers) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
       throw new ApiException(400, "Missing the required parameter 'id' when calling getOptimizedRoute");
@@ -228,6 +380,8 @@ public class RoutesApi {
     if (memberVarReadTimeout != null) {
       localVarRequestBuilder.timeout(memberVarReadTimeout);
     }
+    // Add custom headers if provided
+    localVarRequestBuilder = HttpRequestBuilderExtensions.withAdditionalHeaders(localVarRequestBuilder, headers);
     if (memberVarInterceptor != null) {
       memberVarInterceptor.accept(localVarRequestBuilder);
     }
@@ -242,8 +396,21 @@ public class RoutesApi {
    * @return OptimizedRouteIdentifier
    * @throws ApiException if fails to make API call
    */
-  public OptimizedRouteIdentifier startAndCreateOptimizedRoute(OptimizationRequest optimizationRequest, Boolean considerTransportPriorities) throws ApiException {
-    ApiResponse<OptimizedRouteIdentifier> localVarResponse = startAndCreateOptimizedRouteWithHttpInfo(optimizationRequest, considerTransportPriorities);
+  public OptimizedRouteIdentifier startAndCreateOptimizedRoute(@javax.annotation.Nonnull OptimizationRequest optimizationRequest, @javax.annotation.Nullable Boolean considerTransportPriorities) throws ApiException {
+    return startAndCreateOptimizedRoute(optimizationRequest, considerTransportPriorities, null);
+  }
+
+  /**
+   * 
+   * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
+   * @param optimizationRequest Specific instance for sequence optimization. (required)
+   * @param considerTransportPriorities Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)
+   * @param headers Optional headers to include in the request
+   * @return OptimizedRouteIdentifier
+   * @throws ApiException if fails to make API call
+   */
+  public OptimizedRouteIdentifier startAndCreateOptimizedRoute(@javax.annotation.Nonnull OptimizationRequest optimizationRequest, @javax.annotation.Nullable Boolean considerTransportPriorities, Map<String, String> headers) throws ApiException {
+    ApiResponse<OptimizedRouteIdentifier> localVarResponse = startAndCreateOptimizedRouteWithHttpInfo(optimizationRequest, considerTransportPriorities, headers);
     return localVarResponse.getData();
   }
 
@@ -255,8 +422,21 @@ public class RoutesApi {
    * @return ApiResponse&lt;OptimizedRouteIdentifier&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<OptimizedRouteIdentifier> startAndCreateOptimizedRouteWithHttpInfo(OptimizationRequest optimizationRequest, Boolean considerTransportPriorities) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = startAndCreateOptimizedRouteRequestBuilder(optimizationRequest, considerTransportPriorities);
+  public ApiResponse<OptimizedRouteIdentifier> startAndCreateOptimizedRouteWithHttpInfo(@javax.annotation.Nonnull OptimizationRequest optimizationRequest, @javax.annotation.Nullable Boolean considerTransportPriorities) throws ApiException {
+    return startAndCreateOptimizedRouteWithHttpInfo(optimizationRequest, considerTransportPriorities, null);
+  }
+
+  /**
+   * 
+   * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
+   * @param optimizationRequest Specific instance for sequence optimization. (required)
+   * @param considerTransportPriorities Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)
+   * @param headers Optional headers to include in the request
+   * @return ApiResponse&lt;OptimizedRouteIdentifier&gt;
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<OptimizedRouteIdentifier> startAndCreateOptimizedRouteWithHttpInfo(@javax.annotation.Nonnull OptimizationRequest optimizationRequest, @javax.annotation.Nullable Boolean considerTransportPriorities, Map<String, String> headers) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = startAndCreateOptimizedRouteRequestBuilder(optimizationRequest, considerTransportPriorities, headers);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
           localVarRequestBuilder.build(),
@@ -264,16 +444,35 @@ public class RoutesApi {
       if (memberVarResponseInterceptor != null) {
         memberVarResponseInterceptor.accept(localVarResponse);
       }
+      InputStream localVarResponseBody = null;
       try {
         if (localVarResponse.statusCode()/ 100 != 2) {
           throw getApiException("startAndCreateOptimizedRoute", localVarResponse);
         }
+        localVarResponseBody = ApiClient.getResponseBody(localVarResponse);
+        if (localVarResponseBody == null) {
+          return new ApiResponse<OptimizedRouteIdentifier>(
+              localVarResponse.statusCode(),
+              localVarResponse.headers().map(),
+              null
+          );
+        }
+
+        
+        
+        String responseBody = new String(localVarResponseBody.readAllBytes());
+        OptimizedRouteIdentifier responseValue = responseBody.isBlank()? null: memberVarObjectMapper.readValue(responseBody, new TypeReference<OptimizedRouteIdentifier>() {});
+        
+
         return new ApiResponse<OptimizedRouteIdentifier>(
-          localVarResponse.statusCode(),
-          localVarResponse.headers().map(),
-          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<OptimizedRouteIdentifier>() {}) // closes the InputStream
+            localVarResponse.statusCode(),
+            localVarResponse.headers().map(),
+            responseValue
         );
       } finally {
+        if (localVarResponseBody != null) {
+          localVarResponseBody.close();
+        }
       }
     } catch (IOException e) {
       throw new ApiException(e);
@@ -284,7 +483,7 @@ public class RoutesApi {
     }
   }
 
-  private HttpRequest.Builder startAndCreateOptimizedRouteRequestBuilder(OptimizationRequest optimizationRequest, Boolean considerTransportPriorities) throws ApiException {
+  private HttpRequest.Builder startAndCreateOptimizedRouteRequestBuilder(@javax.annotation.Nonnull OptimizationRequest optimizationRequest, @javax.annotation.Nullable Boolean considerTransportPriorities, Map<String, String> headers) throws ApiException {
     // verify the required parameter 'optimizationRequest' is set
     if (optimizationRequest == null) {
       throw new ApiException(400, "Missing the required parameter 'optimizationRequest' when calling startAndCreateOptimizedRoute");
@@ -323,6 +522,8 @@ public class RoutesApi {
     if (memberVarReadTimeout != null) {
       localVarRequestBuilder.timeout(memberVarReadTimeout);
     }
+    // Add custom headers if provided
+    localVarRequestBuilder = HttpRequestBuilderExtensions.withAdditionalHeaders(localVarRequestBuilder, headers);
     if (memberVarInterceptor != null) {
       memberVarInterceptor.accept(localVarRequestBuilder);
     }

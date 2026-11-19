@@ -36,15 +36,16 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
 @JsonPropertyOrder({
   Restrictions.JSON_PROPERTY_SEQUENCE_OF_STOPS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class Restrictions {
   public static final String JSON_PROPERTY_SEQUENCE_OF_STOPS = "sequenceOfStops";
+  @javax.annotation.Nullable
   private StopsSequence sequenceOfStops = StopsSequence.ANY;
 
   public Restrictions() { 
   }
 
-  public Restrictions sequenceOfStops(StopsSequence sequenceOfStops) {
+  public Restrictions sequenceOfStops(@javax.annotation.Nullable StopsSequence sequenceOfStops) {
     this.sequenceOfStops = sequenceOfStops;
     return this;
   }
@@ -54,16 +55,16 @@ public class Restrictions {
    * @return sequenceOfStops
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEQUENCE_OF_STOPS)
+  @JsonProperty(value = JSON_PROPERTY_SEQUENCE_OF_STOPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public StopsSequence getSequenceOfStops() {
     return sequenceOfStops;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEQUENCE_OF_STOPS)
+  @JsonProperty(value = JSON_PROPERTY_SEQUENCE_OF_STOPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSequenceOfStops(StopsSequence sequenceOfStops) {
+  public void setSequenceOfStops(@javax.annotation.Nullable StopsSequence sequenceOfStops) {
     this.sequenceOfStops = sequenceOfStops;
   }
 
@@ -102,10 +103,7 @@ public class Restrictions {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -142,7 +140,7 @@ public class Restrictions {
 
     // add `sequenceOfStops` to the URL query string
     if (getSequenceOfStops() != null) {
-      joiner.add(String.format("%ssequenceOfStops%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getSequenceOfStops()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%ssequenceOfStops%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getSequenceOfStops()))));
     }
 
     return joiner.toString();

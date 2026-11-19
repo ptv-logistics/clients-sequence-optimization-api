@@ -48,42 +48,52 @@ import com.ptvgroup.developer.client.sequenceoptimization.ApiClient;
   OptimizedRoute.JSON_PROPERTY_BREAK_TIME,
   OptimizedRoute.JSON_PROPERTY_UNPLANNED_TRANSPORT_IDS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:41:48.082993405Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-19T12:53:49.629125932Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class OptimizedRoute {
   public static final String JSON_PROPERTY_ROUTE = "route";
+  @javax.annotation.Nullable
   private List<Stop> route;
 
   public static final String JSON_PROPERTY_START_TIME = "startTime";
+  @javax.annotation.Nullable
   private OffsetDateTime startTime;
 
   public static final String JSON_PROPERTY_END_TIME = "endTime";
+  @javax.annotation.Nullable
   private OffsetDateTime endTime;
 
   public static final String JSON_PROPERTY_TRAVEL_TIME = "travelTime";
+  @javax.annotation.Nullable
   private Integer travelTime;
 
   public static final String JSON_PROPERTY_DISTANCE = "distance";
+  @javax.annotation.Nullable
   private Integer distance;
 
   public static final String JSON_PROPERTY_DRIVING_TIME = "drivingTime";
+  @javax.annotation.Nullable
   private Integer drivingTime;
 
   public static final String JSON_PROPERTY_SERVICE_TIME = "serviceTime";
+  @javax.annotation.Nullable
   private Integer serviceTime;
 
   public static final String JSON_PROPERTY_WAITING_TIME = "waitingTime";
+  @javax.annotation.Nullable
   private Integer waitingTime;
 
   public static final String JSON_PROPERTY_BREAK_TIME = "breakTime";
+  @javax.annotation.Nullable
   private Integer breakTime;
 
   public static final String JSON_PROPERTY_UNPLANNED_TRANSPORT_IDS = "unplannedTransportIds";
+  @javax.annotation.Nullable
   private List<String> unplannedTransportIds;
 
   public OptimizedRoute() { 
   }
 
-  public OptimizedRoute route(List<Stop> route) {
+  public OptimizedRoute route(@javax.annotation.Nullable List<Stop> route) {
     this.route = route;
     return this;
   }
@@ -101,21 +111,21 @@ public class OptimizedRoute {
    * @return route
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ROUTE)
+  @JsonProperty(value = JSON_PROPERTY_ROUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<Stop> getRoute() {
     return route;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ROUTE)
+  @JsonProperty(value = JSON_PROPERTY_ROUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRoute(List<Stop> route) {
+  public void setRoute(@javax.annotation.Nullable List<Stop> route) {
     this.route = route;
   }
 
 
-  public OptimizedRoute startTime(OffsetDateTime startTime) {
+  public OptimizedRoute startTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
@@ -125,21 +135,21 @@ public class OptimizedRoute {
    * @return startTime
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
 
-  public OptimizedRoute endTime(OffsetDateTime endTime) {
+  public OptimizedRoute endTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
     return this;
   }
@@ -149,21 +159,21 @@ public class OptimizedRoute {
    * @return endTime
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public OffsetDateTime getEndTime() {
     return endTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndTime(OffsetDateTime endTime) {
+  public void setEndTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
   }
 
 
-  public OptimizedRoute travelTime(Integer travelTime) {
+  public OptimizedRoute travelTime(@javax.annotation.Nullable Integer travelTime) {
     this.travelTime = travelTime;
     return this;
   }
@@ -173,21 +183,21 @@ public class OptimizedRoute {
    * @return travelTime
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRAVEL_TIME)
+  @JsonProperty(value = JSON_PROPERTY_TRAVEL_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getTravelTime() {
     return travelTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRAVEL_TIME)
+  @JsonProperty(value = JSON_PROPERTY_TRAVEL_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTravelTime(Integer travelTime) {
+  public void setTravelTime(@javax.annotation.Nullable Integer travelTime) {
     this.travelTime = travelTime;
   }
 
 
-  public OptimizedRoute distance(Integer distance) {
+  public OptimizedRoute distance(@javax.annotation.Nullable Integer distance) {
     this.distance = distance;
     return this;
   }
@@ -197,21 +207,21 @@ public class OptimizedRoute {
    * @return distance
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISTANCE)
+  @JsonProperty(value = JSON_PROPERTY_DISTANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getDistance() {
     return distance;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISTANCE)
+  @JsonProperty(value = JSON_PROPERTY_DISTANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDistance(Integer distance) {
+  public void setDistance(@javax.annotation.Nullable Integer distance) {
     this.distance = distance;
   }
 
 
-  public OptimizedRoute drivingTime(Integer drivingTime) {
+  public OptimizedRoute drivingTime(@javax.annotation.Nullable Integer drivingTime) {
     this.drivingTime = drivingTime;
     return this;
   }
@@ -221,21 +231,21 @@ public class OptimizedRoute {
    * @return drivingTime
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DRIVING_TIME)
+  @JsonProperty(value = JSON_PROPERTY_DRIVING_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getDrivingTime() {
     return drivingTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DRIVING_TIME)
+  @JsonProperty(value = JSON_PROPERTY_DRIVING_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDrivingTime(Integer drivingTime) {
+  public void setDrivingTime(@javax.annotation.Nullable Integer drivingTime) {
     this.drivingTime = drivingTime;
   }
 
 
-  public OptimizedRoute serviceTime(Integer serviceTime) {
+  public OptimizedRoute serviceTime(@javax.annotation.Nullable Integer serviceTime) {
     this.serviceTime = serviceTime;
     return this;
   }
@@ -245,21 +255,21 @@ public class OptimizedRoute {
    * @return serviceTime
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getServiceTime() {
     return serviceTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SERVICE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_SERVICE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setServiceTime(Integer serviceTime) {
+  public void setServiceTime(@javax.annotation.Nullable Integer serviceTime) {
     this.serviceTime = serviceTime;
   }
 
 
-  public OptimizedRoute waitingTime(Integer waitingTime) {
+  public OptimizedRoute waitingTime(@javax.annotation.Nullable Integer waitingTime) {
     this.waitingTime = waitingTime;
     return this;
   }
@@ -269,21 +279,21 @@ public class OptimizedRoute {
    * @return waitingTime
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WAITING_TIME)
+  @JsonProperty(value = JSON_PROPERTY_WAITING_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getWaitingTime() {
     return waitingTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WAITING_TIME)
+  @JsonProperty(value = JSON_PROPERTY_WAITING_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWaitingTime(Integer waitingTime) {
+  public void setWaitingTime(@javax.annotation.Nullable Integer waitingTime) {
     this.waitingTime = waitingTime;
   }
 
 
-  public OptimizedRoute breakTime(Integer breakTime) {
+  public OptimizedRoute breakTime(@javax.annotation.Nullable Integer breakTime) {
     this.breakTime = breakTime;
     return this;
   }
@@ -293,21 +303,21 @@ public class OptimizedRoute {
    * @return breakTime
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BREAK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_BREAK_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Integer getBreakTime() {
     return breakTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BREAK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_BREAK_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBreakTime(Integer breakTime) {
+  public void setBreakTime(@javax.annotation.Nullable Integer breakTime) {
     this.breakTime = breakTime;
   }
 
 
-  public OptimizedRoute unplannedTransportIds(List<String> unplannedTransportIds) {
+  public OptimizedRoute unplannedTransportIds(@javax.annotation.Nullable List<String> unplannedTransportIds) {
     this.unplannedTransportIds = unplannedTransportIds;
     return this;
   }
@@ -325,16 +335,16 @@ public class OptimizedRoute {
    * @return unplannedTransportIds
    */
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UNPLANNED_TRANSPORT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_UNPLANNED_TRANSPORT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public List<String> getUnplannedTransportIds() {
     return unplannedTransportIds;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UNPLANNED_TRANSPORT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_UNPLANNED_TRANSPORT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUnplannedTransportIds(List<String> unplannedTransportIds) {
+  public void setUnplannedTransportIds(@javax.annotation.Nullable List<String> unplannedTransportIds) {
     this.unplannedTransportIds = unplannedTransportIds;
   }
 
@@ -391,10 +401,7 @@ public class OptimizedRoute {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
   /**
@@ -433,58 +440,58 @@ public class OptimizedRoute {
     if (getRoute() != null) {
       for (int i = 0; i < getRoute().size(); i++) {
         if (getRoute().get(i) != null) {
-          joiner.add(getRoute().get(i).toUrlQueryString(String.format("%sroute%s%s", prefix, suffix,
-          "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix))));
+          joiner.add(getRoute().get(i).toUrlQueryString(String.format(java.util.Locale.ROOT, "%sroute%s%s", prefix, suffix,
+          "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix))));
         }
       }
     }
 
     // add `startTime` to the URL query string
     if (getStartTime() != null) {
-      joiner.add(String.format("%sstartTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getStartTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sstartTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getStartTime()))));
     }
 
     // add `endTime` to the URL query string
     if (getEndTime() != null) {
-      joiner.add(String.format("%sendTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getEndTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sendTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getEndTime()))));
     }
 
     // add `travelTime` to the URL query string
     if (getTravelTime() != null) {
-      joiner.add(String.format("%stravelTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getTravelTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%stravelTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getTravelTime()))));
     }
 
     // add `distance` to the URL query string
     if (getDistance() != null) {
-      joiner.add(String.format("%sdistance%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getDistance()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sdistance%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getDistance()))));
     }
 
     // add `drivingTime` to the URL query string
     if (getDrivingTime() != null) {
-      joiner.add(String.format("%sdrivingTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getDrivingTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sdrivingTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getDrivingTime()))));
     }
 
     // add `serviceTime` to the URL query string
     if (getServiceTime() != null) {
-      joiner.add(String.format("%sserviceTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getServiceTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sserviceTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getServiceTime()))));
     }
 
     // add `waitingTime` to the URL query string
     if (getWaitingTime() != null) {
-      joiner.add(String.format("%swaitingTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getWaitingTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%swaitingTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getWaitingTime()))));
     }
 
     // add `breakTime` to the URL query string
     if (getBreakTime() != null) {
-      joiner.add(String.format("%sbreakTime%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getBreakTime()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+      joiner.add(String.format(java.util.Locale.ROOT, "%sbreakTime%s=%s", prefix, suffix, ApiClient.urlEncode(ApiClient.valueToString(getBreakTime()))));
     }
 
     // add `unplannedTransportIds` to the URL query string
     if (getUnplannedTransportIds() != null) {
       for (int i = 0; i < getUnplannedTransportIds().size(); i++) {
-        joiner.add(String.format("%sunplannedTransportIds%s%s=%s", prefix, suffix,
-            "".equals(suffix) ? "" : String.format("%s%d%s", containerPrefix, i, containerSuffix),
-            URLEncoder.encode(ApiClient.valueToString(getUnplannedTransportIds().get(i)), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+        joiner.add(String.format(java.util.Locale.ROOT, "%sunplannedTransportIds%s%s=%s", prefix, suffix,
+            "".equals(suffix) ? "" : String.format(java.util.Locale.ROOT, "%s%d%s", containerPrefix, i, containerSuffix),
+            ApiClient.urlEncode(ApiClient.valueToString(getUnplannedTransportIds().get(i)))));
       }
     }
 
