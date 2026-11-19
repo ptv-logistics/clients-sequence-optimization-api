@@ -40,7 +40,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// Initializes a new instance of the <see cref="OptimizedRouteIdentifier" /> class.
         /// </summary>
         /// <param name="id">A unique ID for an optimized route. This ID can be used to delete or get the result of a sequence optimization. (required).</param>
-        public OptimizedRouteIdentifier(Guid id = default(Guid))
+        public OptimizedRouteIdentifier(Guid id = default)
         {
             this.Id = id;
         }

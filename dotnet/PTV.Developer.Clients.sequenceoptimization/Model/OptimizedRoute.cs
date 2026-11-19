@@ -44,7 +44,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="waitingTime">The total waiting time of the route [s]..</param>
         /// <param name="breakTime">The total break time of the route [s]..</param>
         /// <param name="unplannedTransportIds">Returns the transport IDs that could not be planned. These transports are not part of the route..</param>
-        public OptimizedRoute(List<Stop> route = default(List<Stop>), DateTimeOffset startTime = default(DateTimeOffset), DateTimeOffset endTime = default(DateTimeOffset), int? travelTime = default(int?), int? distance = default(int?), int? drivingTime = default(int?), int? serviceTime = default(int?), int? waitingTime = default(int?), int? breakTime = default(int?), List<string> unplannedTransportIds = default(List<string>))
+        public OptimizedRoute(List<Stop> route = default, DateTimeOffset startTime = default, DateTimeOffset endTime = default, int? travelTime = default, int? distance = default, int? drivingTime = default, int? serviceTime = default, int? waitingTime = default, int? breakTime = default, List<string> unplannedTransportIds = default)
         {
             this.Route = route;
             this.StartTime = startTime;

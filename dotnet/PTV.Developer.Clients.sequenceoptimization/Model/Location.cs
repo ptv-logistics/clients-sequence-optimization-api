@@ -55,7 +55,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="openingIntervals">The opening intervals at this location. Leaving this parameter empty means that the location is always open. Service (pickup or delivery) can only start within one of the opening intervals. All opening intervals outside of driver availability interval are not considered during the optimization process..</param>
         /// <param name="customerLocationAttributes">customerLocationAttributes.</param>
         /// <param name="depotLocationAttributes">depotLocationAttributes.</param>
-        public Location(string id = default(string), LocationType? type = default(LocationType?), double? latitude = default(double?), double? longitude = default(double?), RoadAccess roadAccess = default(RoadAccess), bool? includeLastMeters = true, bool? matchSideOfStreet = false, List<TimeInterval> openingIntervals = default(List<TimeInterval>), CustomerLocationAttributes customerLocationAttributes = default(CustomerLocationAttributes), DepotLocationAttributes depotLocationAttributes = default(DepotLocationAttributes))
+        public Location(string id = default, LocationType? type = default, double? latitude = default, double? longitude = default, RoadAccess roadAccess = default, bool? includeLastMeters = true, bool? matchSideOfStreet = false, List<TimeInterval> openingIntervals = default, CustomerLocationAttributes customerLocationAttributes = default, DepotLocationAttributes depotLocationAttributes = default)
         {
             // to ensure "id" is required (not null)
             if (id == null)

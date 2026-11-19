@@ -45,7 +45,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="transports">The list of transports, that is, orders to transport goods from one location to another location. Depending on your subscription, a more restrictive value for maximum number of transport may apply. Check request limits of your subscription. (required).</param>
         /// <param name="route">The route containing a sequence of stops. It specifies where and in which order goods are to be picked up or delivered. Each stop is at a specific location, either a customer location or a depot location. At a customer location, transports are scheduled in order of their type: pickups after deliveries. The sequence of pickups and deliveries is always sorted by Last In - First Out (LIFO). At a depot location a stop groups either pickups or deliveries. A (partial) route already containing the corresponding stops at depot and/or customer locations can be input here. If stops are specified, the **Restrictions** should be set accordingly..</param>
         /// <param name="restrictions">restrictions.</param>
-        public OptimizationRequest(List<Location> locations = default(List<Location>), Vehicle vehicle = default(Vehicle), Driver driver = default(Driver), List<Transport> transports = default(List<Transport>), List<Stop> route = default(List<Stop>), Restrictions restrictions = default(Restrictions))
+        public OptimizationRequest(List<Location> locations = default, Vehicle vehicle = default, Driver driver = default, List<Transport> transports = default, List<Stop> route = default, Restrictions restrictions = default)
         {
             // to ensure "locations" is required (not null)
             if (locations == null)

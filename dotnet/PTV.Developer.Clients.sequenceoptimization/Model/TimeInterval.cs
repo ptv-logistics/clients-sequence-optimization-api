@@ -41,7 +41,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// </summary>
         /// <param name="start">The beginning of the time interval according to [RFC 3339](https://tools.ietf.org/html/rfc3339). The date must not be before 1970-01-01T00:00:00+00:00 nor after 2037-12-31T23:59:59+00:00. The date must provide an offset. (required).</param>
         /// <param name="end">The end of the time interval according to [RFC 3339](https://tools.ietf.org/html/rfc3339). The date must not be before 1970-01-01T00:00:00+00:00 nor after 2037-12-31T23:59:59+00:00. The date must provide an offset. (required).</param>
-        public TimeInterval(DateTimeOffset start = default(DateTimeOffset), DateTimeOffset end = default(DateTimeOffset))
+        public TimeInterval(DateTimeOffset start = default, DateTimeOffset end = default)
         {
             this.Start = start;
             this.End = end;

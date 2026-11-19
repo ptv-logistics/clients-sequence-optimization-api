@@ -41,7 +41,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// Initializes a new instance of the <see cref="Restrictions" /> class.
         /// </summary>
         /// <param name="sequenceOfStops">sequenceOfStops.</param>
-        public Restrictions(StopsSequence? sequenceOfStops = default(StopsSequence?))
+        public Restrictions(StopsSequence? sequenceOfStops = default)
         {
             this.SequenceOfStops = sequenceOfStops;
         }

@@ -42,7 +42,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="locationId">A reference to a location. Usually, goods are picked up or delivered here. If no goods are picked up or delivered, it is the location where a route starts or ends. (required).</param>
         /// <param name="deliveryIds">A list of transport IDs that are delivered at this stop..</param>
         /// <param name="pickupIds">A list of transport IDs that are picked up at this stop..</param>
-        public Stop(string locationId = default(string), List<string> deliveryIds = default(List<string>), List<string> pickupIds = default(List<string>))
+        public Stop(string locationId = default, List<string> deliveryIds = default, List<string> pickupIds = default)
         {
             // to ensure "locationId" is required (not null)
             if (locationId == null)

@@ -40,7 +40,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="endLocationId">ID of the vehicle&#39;s end location. If vehicle&#39;s end location does not coincide with the location of the last delivery, only the coordinates of vehicle&#39;s end location are considered and all other attributes such as opening intervals, service time or type are ignored. If no end location is specified, it is assumed that the vehicle remains at the last stop..</param>
         /// <param name="routeStartInterval">Interval in which the vehicle has to start its route. Start and end of the interval may be the same. Leaving this parameter empty means that the route start is unrestricted..</param>
         /// <param name="maximumDistance">Restricts the maximum allowed total driving distance [m] for the route of the vehicle..</param>
-        public Vehicle(List<int?> capacities = default(List<int?>), string profile = default(string), string startLocationId = default(string), string endLocationId = default(string), TimeInterval routeStartInterval = default(TimeInterval), int? maximumDistance = default(int?))
+        public Vehicle(List<int?> capacities = default, string profile = default, string startLocationId = default, string endLocationId = default, TimeInterval routeStartInterval = default, int? maximumDistance = default)
         {
             this.Capacities = capacities;
             this.Profile = profile;

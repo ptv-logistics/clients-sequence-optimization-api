@@ -83,7 +83,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OptimizedRouteIdentifier</returns>
-        OptimizedRouteIdentifier StartAndCreateOptimizedRoute(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), int operationIndex = 0);
+        OptimizedRouteIdentifier StartAndCreateOptimizedRoute(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default, int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -96,7 +96,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OptimizedRouteIdentifier</returns>
-        ApiResponse<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteWithHttpInfo(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), int operationIndex = 0);
+        ApiResponse<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteWithHttpInfo(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -117,7 +117,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteOptimizedRouteAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteOptimizedRouteAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -130,7 +130,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOptimizedRouteWithHttpInfoAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOptimizedRouteWithHttpInfoAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -142,7 +142,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OptimizedRouteResponse</returns>
-        System.Threading.Tasks.Task<OptimizedRouteResponse> GetOptimizedRouteAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OptimizedRouteResponse> GetOptimizedRouteAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -155,7 +155,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OptimizedRouteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OptimizedRouteResponse>> GetOptimizedRouteWithHttpInfoAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OptimizedRouteResponse>> GetOptimizedRouteWithHttpInfoAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -168,7 +168,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OptimizedRouteIdentifier</returns>
-        System.Threading.Tasks.Task<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -182,7 +182,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OptimizedRouteIdentifier)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OptimizedRouteIdentifier>> StartAndCreateOptimizedRouteWithHttpInfoAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OptimizedRouteIdentifier>> StartAndCreateOptimizedRouteWithHttpInfoAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -335,6 +335,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
             };
 
             var localVarContentType = PTV.Developer.Clients.sequenceoptimization.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -379,7 +380,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteOptimizedRouteAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteOptimizedRouteAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             await DeleteOptimizedRouteWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -392,7 +393,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<Object>> DeleteOptimizedRouteWithHttpInfoAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<Object>> DeleteOptimizedRouteWithHttpInfoAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
 
             PTV.Developer.Clients.sequenceoptimization.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.sequenceoptimization.Client.RequestOptions();
@@ -476,6 +477,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
             };
 
             var localVarContentType = PTV.Developer.Clients.sequenceoptimization.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -520,7 +522,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OptimizedRouteResponse</returns>
-        public async System.Threading.Tasks.Task<OptimizedRouteResponse> GetOptimizedRouteAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OptimizedRouteResponse> GetOptimizedRouteAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteResponse> localVarResponse = await GetOptimizedRouteWithHttpInfoAsync(id, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -534,7 +536,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OptimizedRouteResponse)</returns>
-        public async System.Threading.Tasks.Task<PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteResponse>> GetOptimizedRouteWithHttpInfoAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteResponse>> GetOptimizedRouteWithHttpInfoAsync(Guid id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
 
             PTV.Developer.Clients.sequenceoptimization.Client.RequestOptions localVarRequestOptions = new PTV.Developer.Clients.sequenceoptimization.Client.RequestOptions();
@@ -593,7 +595,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OptimizedRouteIdentifier</returns>
-        public OptimizedRouteIdentifier StartAndCreateOptimizedRoute(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), int operationIndex = 0)
+        public OptimizedRouteIdentifier StartAndCreateOptimizedRoute(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default, int operationIndex = 0)
         {
             PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteIdentifier> localVarResponse = StartAndCreateOptimizedRouteWithHttpInfo(optimizationRequest, considerTransportPriorities);
             return localVarResponse.Data;
@@ -607,7 +609,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="considerTransportPriorities">Set transport priority consideration to true or false.  See [here](./concepts/transport-priorities) for more information. (optional, default to false)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OptimizedRouteIdentifier</returns>
-        public PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteWithHttpInfo(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), int operationIndex = 0)
+        public PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteWithHttpInfo(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default, int operationIndex = 0)
         {
             // verify the required parameter 'optimizationRequest' is set
             if (optimizationRequest == null)
@@ -627,6 +629,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
             };
 
             var localVarContentType = PTV.Developer.Clients.sequenceoptimization.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -676,7 +679,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OptimizedRouteIdentifier</returns>
-        public async System.Threading.Tasks.Task<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OptimizedRouteIdentifier> StartAndCreateOptimizedRouteAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteIdentifier> localVarResponse = await StartAndCreateOptimizedRouteWithHttpInfoAsync(optimizationRequest, considerTransportPriorities, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -691,7 +694,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OptimizedRouteIdentifier)</returns>
-        public async System.Threading.Tasks.Task<PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteIdentifier>> StartAndCreateOptimizedRouteWithHttpInfoAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PTV.Developer.Clients.sequenceoptimization.Client.ApiResponse<OptimizedRouteIdentifier>> StartAndCreateOptimizedRouteWithHttpInfoAsync(OptimizationRequest optimizationRequest, bool? considerTransportPriorities = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'optimizationRequest' is set
             if (optimizationRequest == null)

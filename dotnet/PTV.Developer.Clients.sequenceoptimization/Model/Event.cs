@@ -49,7 +49,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="startTime">The start time of the event according to [RFC 3339](https://tools.ietf.org/html/rfc3339). (required).</param>
         /// <param name="duration">The duration of the event [s]. The duration may be 0. (required).</param>
         /// <param name="transportId">The ID of the corresponding transport if the event is a service event. Otherwise the ID is null..</param>
-        public Event(EventType type = default(EventType), DateTimeOffset startTime = default(DateTimeOffset), int? duration = default(int?), string transportId = default(string))
+        public Event(EventType type = default, DateTimeOffset startTime = default, int? duration = default, string transportId = default)
         {
             this.Type = type;
             this.StartTime = startTime;

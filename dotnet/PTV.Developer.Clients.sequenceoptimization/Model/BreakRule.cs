@@ -43,7 +43,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="maximumDrivingTimeBetweenBreaks">Maximum duration that the driver is allowed to drive [s] before taking a break. The maximum driving time is considered as infinite if it is not set..</param>
         /// <param name="maximumWorkingTimeBetweenBreaks">Maximum duration that the driver is allowed to work [s] before taking a break. The maximum working time is considered as infinite if it is not set..</param>
         /// <param name="workingTimeThreshold">Idle time of the driver counts as working time if it is shorter than this value [s]. May not be higher than **breakTime**. (default to 0).</param>
-        public BreakRule(int? breakTime = default(int?), int? maximumDrivingTimeBetweenBreaks = default(int?), int? maximumWorkingTimeBetweenBreaks = default(int?), int? workingTimeThreshold = 0)
+        public BreakRule(int? breakTime = default, int? maximumDrivingTimeBetweenBreaks = default, int? maximumWorkingTimeBetweenBreaks = default, int? workingTimeThreshold = 0)
         {
             // to ensure "breakTime" is required (not null)
             if (breakTime == null)

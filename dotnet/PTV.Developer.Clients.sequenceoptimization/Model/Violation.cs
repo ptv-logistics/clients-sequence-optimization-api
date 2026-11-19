@@ -49,7 +49,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="timeExceedance">Specifies a violation that involves a time limit: Time by which the limit is exceeded. Is only filled for the following violation types: _ROUTE_START_INTERVAL_, DRIVER_AVAILABILITY, OPENING_INTERVAL, MAXIMUM_TRAVEL_TIME_OF_DRIVER and MAXIMUM_DRIVING_TIME_OF_DRIVER..</param>
         /// <param name="distanceExceedance">Specifies a violation that involves a distance limit: Distance by which the limit is exceeded. Is only filled for the following violation type: _MAXIMUM_DISTANCE_..</param>
         /// <param name="capacityExceedance">Specifies a violation of the capacities of the used vehicle: Exceedance of the capacity in each quantity dimension of goods. Is only filled for the following violation types: VEHICLE_CAPACITY..</param>
-        public Violation(ViolationType type = default(ViolationType), int? timeExceedance = default(int?), int? distanceExceedance = default(int?), List<int?> capacityExceedance = default(List<int?>))
+        public Violation(ViolationType type = default, int? timeExceedance = default, int? distanceExceedance = default, List<int?> capacityExceedance = default)
         {
             this.Type = type;
             this.TimeExceedance = timeExceedance;

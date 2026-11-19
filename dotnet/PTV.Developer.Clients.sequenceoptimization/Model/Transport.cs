@@ -46,7 +46,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="deliveryLocationId">The ID of the location where goods have to be delivered to. (required).</param>
         /// <param name="deliveryServiceTime">The service time [s] that is required to deliver the transport goods at the delivery location. (default to 0).</param>
         /// <param name="priority">The priority of this transport. 0 is the lowest priority, 9 the highest. This field is only considered during the optimization if considerTransportPriorities is set. In this case every transport must have a priority set otherwise an exception is thrown. If considerTransportPriorities is set to false either every or no transport may have a priority set.  See [here](./concepts/transport-priorities) for more information..</param>
-        public Transport(string id = default(string), List<int?> quantities = default(List<int?>), string pickupLocationId = default(string), int? pickupServiceTime = 0, string deliveryLocationId = default(string), int? deliveryServiceTime = 0, int? priority = default(int?))
+        public Transport(string id = default, List<int?> quantities = default, string pickupLocationId = default, int? pickupServiceTime = 0, string deliveryLocationId = default, int? deliveryServiceTime = 0, int? priority = default)
         {
             // to ensure "id" is required (not null)
             if (id == null)

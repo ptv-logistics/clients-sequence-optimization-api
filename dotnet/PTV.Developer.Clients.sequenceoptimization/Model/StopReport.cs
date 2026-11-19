@@ -45,7 +45,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="waitingTime">The waiting time at the stop [s]. (required).</param>
         /// <param name="breakTime">The break time at the stop [s]. (required).</param>
         /// <param name="quantities">The quantities loaded on the vehicle when leaving the stop..</param>
-        public StopReport(DateTimeOffset arrivalTime = default(DateTimeOffset), DateTimeOffset departureTime = default(DateTimeOffset), int? serviceTime = default(int?), int? waitingTime = default(int?), int? breakTime = default(int?), List<int?> quantities = default(List<int?>))
+        public StopReport(DateTimeOffset arrivalTime = default, DateTimeOffset departureTime = default, int? serviceTime = default, int? waitingTime = default, int? breakTime = default, List<int?> quantities = default)
         {
             this.ArrivalTime = arrivalTime;
             this.DepartureTime = departureTime;

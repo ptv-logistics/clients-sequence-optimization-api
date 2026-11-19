@@ -51,7 +51,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="workLogbook">workLogbook.</param>
         /// <param name="maximumDrivingTime">The maximum driving time of the driver [s].   The maximum driving time is considered as infinite if it is not set..</param>
         /// <param name="maximumTravelTime">The maximum travel time of the driver [s]. The travel time contains all waiting, service and driving times.  The maximum travel time is considered as infinite if it is not set..</param>
-        public Driver(TimeInterval availability = default(TimeInterval), WorkingHoursPreset? workingHoursPreset = default(WorkingHoursPreset?), BreakRule breakRule = default(BreakRule), WorkLogbook workLogbook = default(WorkLogbook), int? maximumDrivingTime = default(int?), int? maximumTravelTime = default(int?))
+        public Driver(TimeInterval availability = default, WorkingHoursPreset? workingHoursPreset = default, BreakRule breakRule = default, WorkLogbook workLogbook = default, int? maximumDrivingTime = default, int? maximumTravelTime = default)
         {
             // to ensure "availability" is required (not null)
             if (availability == null)

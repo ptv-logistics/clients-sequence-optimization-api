@@ -43,7 +43,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="serviceTimePerTransportStop">The service time [s] that is required each time this location is visited in order to pick goods up or to deliver them. The location-dependent service time represents, for example, the time to enter the premises or to register at a customer. Besides a location-dependent service time, the user may specify an additional transport-dependent service time at the transports. (default to 0).</param>
         /// <param name="positionInRoute">positionInRoute.</param>
         /// <param name="routeSectionNumber">If routeSectionNumber is specified, a stop at this customer location will be visited after stops at customer locations with specified lower routeSectionNumber and before stops at customer locations with specified higher routeSectionNumber. Consequently, the route section numbers of stops at customer locations must be non-decreasing.   If specified, positionInRoute must not be set for the same location.  See [here](./concepts/route-sections-and-position-route) for more information..</param>
-        public CustomerLocationAttributes(int? serviceTimePerTransportStop = 0, PositionInRoute? positionInRoute = default(PositionInRoute?), int? routeSectionNumber = default(int?))
+        public CustomerLocationAttributes(int? serviceTimePerTransportStop = 0, PositionInRoute? positionInRoute = default, int? routeSectionNumber = default)
         {
             // use default value if no "serviceTimePerTransportStop" provided
             this.ServiceTimePerTransportStop = serviceTimePerTransportStop ?? 0;

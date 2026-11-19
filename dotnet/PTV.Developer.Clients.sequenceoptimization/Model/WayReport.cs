@@ -42,7 +42,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="distance">The driving distance from the previous stop to this stop [m]. (required).</param>
         /// <param name="drivingTime">The driving time from the previous stop to this stop [s]. (required).</param>
         /// <param name="breakTime">The sum of break times between the departure from the previous stop and the arrival at this stop [s]. (required).</param>
-        public WayReport(int? distance = default(int?), int? drivingTime = default(int?), int? breakTime = default(int?))
+        public WayReport(int? distance = default, int? drivingTime = default, int? breakTime = default)
         {
             // to ensure "distance" is required (not null)
             if (distance == null)

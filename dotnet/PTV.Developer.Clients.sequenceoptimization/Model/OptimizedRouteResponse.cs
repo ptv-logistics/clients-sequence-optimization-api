@@ -49,7 +49,7 @@ namespace PTV.Developer.Clients.sequenceoptimization.Model
         /// <param name="optimizedRoute">optimizedRoute.</param>
         /// <param name="error">A human readable message that describes the error. Set and used only when operation status is FAILED..</param>
         /// <param name="warnings">A list of warnings concerning the validity of the result..</param>
-        public OptimizedRouteResponse(OperationStatus status = default(OperationStatus), OptimizedRoute optimizedRoute = default(OptimizedRoute), ErrorResponse error = default(ErrorResponse), List<Warning> warnings = default(List<Warning>))
+        public OptimizedRouteResponse(OperationStatus status = default, OptimizedRoute optimizedRoute = default, ErrorResponse error = default, List<Warning> warnings = default)
         {
             this.Status = status;
             this.OptimizedRoute = optimizedRoute;
