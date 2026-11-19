@@ -58,11 +58,11 @@ export function RestrictionsFromJSONTyped(json: any, ignoreDiscriminator: boolea
     };
 }
 
-  export function RestrictionsToJSON(json: any): Restrictions {
-      return RestrictionsToJSONTyped(json, false);
-  }
+export function RestrictionsToJSON(json: any): Restrictions {
+    return RestrictionsToJSONTyped(json, false);
+}
 
-  export function RestrictionsToJSONTyped(value?: Restrictions | null, ignoreDiscriminator: boolean = false): any {
+export function RestrictionsToJSONTyped(value?: Restrictions | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

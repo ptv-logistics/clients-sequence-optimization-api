@@ -70,11 +70,11 @@ export function BreakRuleFromJSONTyped(json: any, ignoreDiscriminator: boolean):
     };
 }
 
-  export function BreakRuleToJSON(json: any): BreakRule {
-      return BreakRuleToJSONTyped(json, false);
-  }
+export function BreakRuleToJSON(json: any): BreakRule {
+    return BreakRuleToJSONTyped(json, false);
+}
 
-  export function BreakRuleToJSONTyped(value?: BreakRule | null, ignoreDiscriminator: boolean = false): any {
+export function BreakRuleToJSONTyped(value?: BreakRule | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

@@ -65,11 +65,11 @@ export function WayReportFromJSONTyped(json: any, ignoreDiscriminator: boolean):
     };
 }
 
-  export function WayReportToJSON(json: any): WayReport {
-      return WayReportToJSONTyped(json, false);
-  }
+export function WayReportToJSON(json: any): WayReport {
+    return WayReportToJSONTyped(json, false);
+}
 
-  export function WayReportToJSONTyped(value?: WayReport | null, ignoreDiscriminator: boolean = false): any {
+export function WayReportToJSONTyped(value?: WayReport | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

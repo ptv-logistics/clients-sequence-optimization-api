@@ -49,11 +49,11 @@ export function OptimizedRouteIdentifierFromJSONTyped(json: any, ignoreDiscrimin
     };
 }
 
-  export function OptimizedRouteIdentifierToJSON(json: any): OptimizedRouteIdentifier {
-      return OptimizedRouteIdentifierToJSONTyped(json, false);
-  }
+export function OptimizedRouteIdentifierToJSON(json: any): OptimizedRouteIdentifier {
+    return OptimizedRouteIdentifierToJSONTyped(json, false);
+}
 
-  export function OptimizedRouteIdentifierToJSONTyped(value?: OptimizedRouteIdentifier | null, ignoreDiscriminator: boolean = false): any {
+export function OptimizedRouteIdentifierToJSONTyped(value?: OptimizedRouteIdentifier | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

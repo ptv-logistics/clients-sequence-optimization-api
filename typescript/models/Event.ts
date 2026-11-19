@@ -82,11 +82,11 @@ export function EventFromJSONTyped(json: any, ignoreDiscriminator: boolean): Eve
     };
 }
 
-  export function EventToJSON(json: any): Event {
-      return EventToJSONTyped(json, false);
-  }
+export function EventToJSON(json: any): Event {
+    return EventToJSONTyped(json, false);
+}
 
-  export function EventToJSONTyped(value?: Event | null, ignoreDiscriminator: boolean = false): any {
+export function EventToJSONTyped(value?: Event | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }
@@ -94,7 +94,7 @@ export function EventFromJSONTyped(json: any, ignoreDiscriminator: boolean): Eve
     return {
         
         'type': EventTypeToJSON(value['type']),
-        'startTime': ((value['startTime']).toISOString()),
+        'startTime': value['startTime'].toISOString(),
         'duration': value['duration'],
         'transportId': value['transportId'],
     };

@@ -57,11 +57,11 @@ export function RoadAccessFromJSONTyped(json: any, ignoreDiscriminator: boolean)
     };
 }
 
-  export function RoadAccessToJSON(json: any): RoadAccess {
-      return RoadAccessToJSONTyped(json, false);
-  }
+export function RoadAccessToJSON(json: any): RoadAccess {
+    return RoadAccessToJSONTyped(json, false);
+}
 
-  export function RoadAccessToJSONTyped(value?: RoadAccess | null, ignoreDiscriminator: boolean = false): any {
+export function RoadAccessToJSONTyped(value?: RoadAccess | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

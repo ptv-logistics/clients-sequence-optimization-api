@@ -94,11 +94,11 @@ export function VehicleFromJSONTyped(json: any, ignoreDiscriminator: boolean): V
     };
 }
 
-  export function VehicleToJSON(json: any): Vehicle {
-      return VehicleToJSONTyped(json, false);
-  }
+export function VehicleToJSON(json: any): Vehicle {
+    return VehicleToJSONTyped(json, false);
+}
 
-  export function VehicleToJSONTyped(value?: Vehicle | null, ignoreDiscriminator: boolean = false): any {
+export function VehicleToJSONTyped(value?: Vehicle | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

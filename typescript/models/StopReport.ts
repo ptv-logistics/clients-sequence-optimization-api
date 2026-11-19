@@ -88,19 +88,19 @@ export function StopReportFromJSONTyped(json: any, ignoreDiscriminator: boolean)
     };
 }
 
-  export function StopReportToJSON(json: any): StopReport {
-      return StopReportToJSONTyped(json, false);
-  }
+export function StopReportToJSON(json: any): StopReport {
+    return StopReportToJSONTyped(json, false);
+}
 
-  export function StopReportToJSONTyped(value?: StopReport | null, ignoreDiscriminator: boolean = false): any {
+export function StopReportToJSONTyped(value?: StopReport | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }
 
     return {
         
-        'arrivalTime': ((value['arrivalTime']).toISOString()),
-        'departureTime': ((value['departureTime']).toISOString()),
+        'arrivalTime': value['arrivalTime'].toISOString(),
+        'departureTime': value['departureTime'].toISOString(),
         'serviceTime': value['serviceTime'],
         'waitingTime': value['waitingTime'],
         'breakTime': value['breakTime'],

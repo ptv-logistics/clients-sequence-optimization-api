@@ -55,11 +55,11 @@ export function DepotLocationAttributesFromJSONTyped(json: any, ignoreDiscrimina
     };
 }
 
-  export function DepotLocationAttributesToJSON(json: any): DepotLocationAttributes {
-      return DepotLocationAttributesToJSONTyped(json, false);
-  }
+export function DepotLocationAttributesToJSON(json: any): DepotLocationAttributes {
+    return DepotLocationAttributesToJSONTyped(json, false);
+}
 
-  export function DepotLocationAttributesToJSONTyped(value?: DepotLocationAttributes | null, ignoreDiscriminator: boolean = false): any {
+export function DepotLocationAttributesToJSONTyped(value?: DepotLocationAttributes | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

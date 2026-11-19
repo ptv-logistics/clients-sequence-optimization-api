@@ -119,11 +119,11 @@ export function DriverFromJSONTyped(json: any, ignoreDiscriminator: boolean): Dr
     };
 }
 
-  export function DriverToJSON(json: any): Driver {
-      return DriverToJSONTyped(json, false);
-  }
+export function DriverToJSON(json: any): Driver {
+    return DriverToJSONTyped(json, false);
+}
 
-  export function DriverToJSONTyped(value?: Driver | null, ignoreDiscriminator: boolean = false): any {
+export function DriverToJSONTyped(value?: Driver | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

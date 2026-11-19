@@ -12,24 +12,27 @@
  * Do not edit the class manually.
  */
 
-
 import * as runtime from '../runtime';
-import type {
-  ErrorResponse,
-  OptimizationRequest,
-  OptimizedRouteIdentifier,
-  OptimizedRouteResponse,
-} from '../models/index';
 import {
+    type ErrorResponse,
     ErrorResponseFromJSON,
     ErrorResponseToJSON,
+} from '../models/ErrorResponse';
+import {
+    type OptimizationRequest,
     OptimizationRequestFromJSON,
     OptimizationRequestToJSON,
+} from '../models/OptimizationRequest';
+import {
+    type OptimizedRouteIdentifier,
     OptimizedRouteIdentifierFromJSON,
     OptimizedRouteIdentifierToJSON,
+} from '../models/OptimizedRouteIdentifier';
+import {
+    type OptimizedRouteResponse,
     OptimizedRouteResponseFromJSON,
     OptimizedRouteResponseToJSON,
-} from '../models/index';
+} from '../models/OptimizedRouteResponse';
 
 export interface DeleteOptimizedRouteRequest {
     id: string;
@@ -50,9 +53,9 @@ export interface StartAndCreateOptimizedRouteRequest {
 export class RoutesApi extends runtime.BaseAPI {
 
     /**
-     * Deletes the optimized route whose ID is specified.
+     * Creates request options for deleteOptimizedRoute without sending the request
      */
-    async deleteOptimizedRouteRaw(requestParameters: DeleteOptimizedRouteRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>> {
+    async deleteOptimizedRouteRequestOpts(requestParameters: DeleteOptimizedRouteRequest): Promise<runtime.RequestOpts> {
         if (requestParameters['id'] == null) {
             throw new runtime.RequiredError(
                 'id',
@@ -68,12 +71,24 @@ export class RoutesApi extends runtime.BaseAPI {
             headerParameters["apiKey"] = await this.configuration.apiKey("apiKey"); // apiKeyAuth authentication
         }
 
-        const response = await this.request({
-            path: `/routes/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters['id']))),
+
+        let urlPath = `/routes/{id}`;
+        urlPath = urlPath.replace('{id}', encodeURIComponent(String(requestParameters['id'])));
+
+        return {
+            path: urlPath,
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
-        }, initOverrides);
+        };
+    }
+
+    /**
+     * Deletes the optimized route whose ID is specified.
+     */
+    async deleteOptimizedRouteRaw(requestParameters: DeleteOptimizedRouteRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>> {
+        const requestOptions = await this.deleteOptimizedRouteRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
 
         return new runtime.VoidApiResponse(response);
     }
@@ -86,9 +101,9 @@ export class RoutesApi extends runtime.BaseAPI {
     }
 
     /**
-     * Retrieves the status, and if the status is SUCCEEDED, the optimized route whose ID is specified.
+     * Creates request options for getOptimizedRoute without sending the request
      */
-    async getOptimizedRouteRaw(requestParameters: GetOptimizedRouteRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<OptimizedRouteResponse>> {
+    async getOptimizedRouteRequestOpts(requestParameters: GetOptimizedRouteRequest): Promise<runtime.RequestOpts> {
         if (requestParameters['id'] == null) {
             throw new runtime.RequiredError(
                 'id',
@@ -104,12 +119,24 @@ export class RoutesApi extends runtime.BaseAPI {
             headerParameters["apiKey"] = await this.configuration.apiKey("apiKey"); // apiKeyAuth authentication
         }
 
-        const response = await this.request({
-            path: `/routes/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters['id']))),
+
+        let urlPath = `/routes/{id}`;
+        urlPath = urlPath.replace('{id}', encodeURIComponent(String(requestParameters['id'])));
+
+        return {
+            path: urlPath,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
-        }, initOverrides);
+        };
+    }
+
+    /**
+     * Retrieves the status, and if the status is SUCCEEDED, the optimized route whose ID is specified.
+     */
+    async getOptimizedRouteRaw(requestParameters: GetOptimizedRouteRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<OptimizedRouteResponse>> {
+        const requestOptions = await this.getOptimizedRouteRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
 
         return new runtime.JSONApiResponse(response, (jsonValue) => OptimizedRouteResponseFromJSON(jsonValue));
     }
@@ -123,9 +150,9 @@ export class RoutesApi extends runtime.BaseAPI {
     }
 
     /**
-     * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
+     * Creates request options for startAndCreateOptimizedRoute without sending the request
      */
-    async startAndCreateOptimizedRouteRaw(requestParameters: StartAndCreateOptimizedRouteRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<OptimizedRouteIdentifier>> {
+    async startAndCreateOptimizedRouteRequestOpts(requestParameters: StartAndCreateOptimizedRouteRequest): Promise<runtime.RequestOpts> {
         if (requestParameters['optimizationRequest'] == null) {
             throw new runtime.RequiredError(
                 'optimizationRequest',
@@ -147,13 +174,24 @@ export class RoutesApi extends runtime.BaseAPI {
             headerParameters["apiKey"] = await this.configuration.apiKey("apiKey"); // apiKeyAuth authentication
         }
 
-        const response = await this.request({
-            path: `/routes`,
+
+        let urlPath = `/routes`;
+
+        return {
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
             body: OptimizationRequestToJSON(requestParameters['optimizationRequest']),
-        }, initOverrides);
+        };
+    }
+
+    /**
+     * Performs desired sequence optimization. The call is asynchronous and only one optimization can be started at a time. Returns unique optimized route ID upon success. Use the unique ID returned to subsequently track the progress of the optimization and to get the optimized route. The number of transports in the request is used to calculate the number of transactions, see [here](../../help/faq-help) for more information.
+     */
+    async startAndCreateOptimizedRouteRaw(requestParameters: StartAndCreateOptimizedRouteRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<OptimizedRouteIdentifier>> {
+        const requestOptions = await this.startAndCreateOptimizedRouteRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
 
         return new runtime.JSONApiResponse(response, (jsonValue) => OptimizedRouteIdentifierFromJSON(jsonValue));
     }

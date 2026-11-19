@@ -65,18 +65,18 @@ export function WorkLogbookFromJSONTyped(json: any, ignoreDiscriminator: boolean
     };
 }
 
-  export function WorkLogbookToJSON(json: any): WorkLogbook {
-      return WorkLogbookToJSONTyped(json, false);
-  }
+export function WorkLogbookToJSON(json: any): WorkLogbook {
+    return WorkLogbookToJSONTyped(json, false);
+}
 
-  export function WorkLogbookToJSONTyped(value?: WorkLogbook | null, ignoreDiscriminator: boolean = false): any {
+export function WorkLogbookToJSONTyped(value?: WorkLogbook | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }
 
     return {
         
-        'lastTimeTheDriverWorked': ((value['lastTimeTheDriverWorked']).toISOString()),
+        'lastTimeTheDriverWorked': value['lastTimeTheDriverWorked'].toISOString(),
         'accumulatedDrivingTimeSinceLastBreak': value['accumulatedDrivingTimeSinceLastBreak'],
         'accumulatedWorkingTimeSinceLastBreak': value['accumulatedWorkingTimeSinceLastBreak'],
     };

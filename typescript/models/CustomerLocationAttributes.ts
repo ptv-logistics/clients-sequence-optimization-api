@@ -76,11 +76,11 @@ export function CustomerLocationAttributesFromJSONTyped(json: any, ignoreDiscrim
     };
 }
 
-  export function CustomerLocationAttributesToJSON(json: any): CustomerLocationAttributes {
-      return CustomerLocationAttributesToJSONTyped(json, false);
-  }
+export function CustomerLocationAttributesToJSON(json: any): CustomerLocationAttributes {
+    return CustomerLocationAttributesToJSONTyped(json, false);
+}
 
-  export function CustomerLocationAttributesToJSONTyped(value?: CustomerLocationAttributes | null, ignoreDiscriminator: boolean = false): any {
+export function CustomerLocationAttributesToJSONTyped(value?: CustomerLocationAttributes | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

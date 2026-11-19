@@ -101,11 +101,11 @@ export function OptimizedRouteResponseFromJSONTyped(json: any, ignoreDiscriminat
     };
 }
 
-  export function OptimizedRouteResponseToJSON(json: any): OptimizedRouteResponse {
-      return OptimizedRouteResponseToJSONTyped(json, false);
-  }
+export function OptimizedRouteResponseToJSON(json: any): OptimizedRouteResponse {
+    return OptimizedRouteResponseToJSONTyped(json, false);
+}
 
-  export function OptimizedRouteResponseToJSONTyped(value?: OptimizedRouteResponse | null, ignoreDiscriminator: boolean = false): any {
+export function OptimizedRouteResponseToJSONTyped(value?: OptimizedRouteResponse | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

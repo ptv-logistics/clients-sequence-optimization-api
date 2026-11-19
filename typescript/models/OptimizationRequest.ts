@@ -129,11 +129,11 @@ export function OptimizationRequestFromJSONTyped(json: any, ignoreDiscriminator:
     };
 }
 
-  export function OptimizationRequestToJSON(json: any): OptimizationRequest {
-      return OptimizationRequestToJSONTyped(json, false);
-  }
+export function OptimizationRequestToJSON(json: any): OptimizationRequest {
+    return OptimizationRequestToJSONTyped(json, false);
+}
 
-  export function OptimizationRequestToJSONTyped(value?: OptimizationRequest | null, ignoreDiscriminator: boolean = false): any {
+export function OptimizationRequestToJSONTyped(value?: OptimizationRequest | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

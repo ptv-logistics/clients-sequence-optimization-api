@@ -80,11 +80,11 @@ export function ViolationFromJSONTyped(json: any, ignoreDiscriminator: boolean):
     };
 }
 
-  export function ViolationToJSON(json: any): Violation {
-      return ViolationToJSONTyped(json, false);
-  }
+export function ViolationToJSON(json: any): Violation {
+    return ViolationToJSONTyped(json, false);
+}
 
-  export function ViolationToJSONTyped(value?: Violation | null, ignoreDiscriminator: boolean = false): any {
+export function ViolationToJSONTyped(value?: Violation | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

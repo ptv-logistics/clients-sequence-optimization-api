@@ -146,11 +146,11 @@ export function StopFromJSONTyped(json: any, ignoreDiscriminator: boolean): Stop
     };
 }
 
-  export function StopToJSON(json: any): Stop {
-      return StopToJSONTyped(json, false);
-  }
+export function StopToJSON(json: any): Stop {
+    return StopToJSONTyped(json, false);
+}
 
-  export function StopToJSONTyped(value?: Omit<Stop, 'reportForWayToStop'|'reportForStop'|'eventsOnWayToStop'|'eventsAtStop'|'violationsOnWayToStop'|'violationsAtStop'> | null, ignoreDiscriminator: boolean = false): any {
+export function StopToJSONTyped(value?: Omit<Stop, 'reportForWayToStop'|'reportForStop'|'eventsOnWayToStop'|'eventsAtStop'|'violationsOnWayToStop'|'violationsAtStop'> | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

@@ -97,11 +97,11 @@ export function TransportFromJSONTyped(json: any, ignoreDiscriminator: boolean):
     };
 }
 
-  export function TransportToJSON(json: any): Transport {
-      return TransportToJSONTyped(json, false);
-  }
+export function TransportToJSON(json: any): Transport {
+    return TransportToJSONTyped(json, false);
+}
 
-  export function TransportToJSONTyped(value?: Transport | null, ignoreDiscriminator: boolean = false): any {
+export function TransportToJSONTyped(value?: Transport | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }

@@ -119,11 +119,11 @@ export function OptimizedRouteFromJSONTyped(json: any, ignoreDiscriminator: bool
     };
 }
 
-  export function OptimizedRouteToJSON(json: any): OptimizedRoute {
-      return OptimizedRouteToJSONTyped(json, false);
-  }
+export function OptimizedRouteToJSON(json: any): OptimizedRoute {
+    return OptimizedRouteToJSONTyped(json, false);
+}
 
-  export function OptimizedRouteToJSONTyped(value?: OptimizedRoute | null, ignoreDiscriminator: boolean = false): any {
+export function OptimizedRouteToJSONTyped(value?: OptimizedRoute | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }
@@ -131,8 +131,8 @@ export function OptimizedRouteFromJSONTyped(json: any, ignoreDiscriminator: bool
     return {
         
         'route': value['route'] == null ? undefined : ((value['route'] as Array<any>).map(StopToJSON)),
-        'startTime': value['startTime'] == null ? undefined : ((value['startTime']).toISOString()),
-        'endTime': value['endTime'] == null ? undefined : ((value['endTime']).toISOString()),
+        'startTime': value['startTime'] == null ? value['startTime'] : value['startTime'].toISOString(),
+        'endTime': value['endTime'] == null ? value['endTime'] : value['endTime'].toISOString(),
         'travelTime': value['travelTime'],
         'distance': value['distance'],
         'drivingTime': value['drivingTime'],
